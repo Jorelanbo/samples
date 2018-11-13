@@ -14,12 +14,14 @@
         android:id="@+id/ll"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/bt1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:text="点击我1"
             android:textSize="24sp"
             android:textColor="@android:color/white"
@@ -32,6 +34,7 @@
             android:id="@+id/bt2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:text="获取图片"
             android:textSize="14sp"
             android:textColor="@android:color/white"
@@ -44,6 +47,7 @@
             android:id="@+id/bt3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:text="缓存图片"
             android:textSize="14sp"
             android:textColor="@android:color/white"
@@ -67,24 +71,28 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="showDialog"
         android:text="普通对话框"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="showSingleDialog"
         android:text="单选对话框"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="showMultiDialog"
         android:text="多选对话框"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:onClick="showProgressDialog"
         android:text="进度条对话框"/>
 
