@@ -41,4 +41,14 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DialogActivity.class);
         startActivity(intent);
     }
+
+    /**
+     *
+     * logger框架
+     * @param view
+     */
+    public void clickLoggerActivity(View view) {
+        Intent intent = new Intent(this, LoggerActivity.class);
+        startActivity(intent);
+    }
 }

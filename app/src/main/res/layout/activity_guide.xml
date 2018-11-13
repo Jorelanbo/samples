@@ -36,4 +36,11 @@
         android:text="窗口模式的activity"
         android:onClick="clickDialogActivity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="Logger框架应用"
+        android:onClick="clickLoggerActivity"/>
+
 </LinearLayout>

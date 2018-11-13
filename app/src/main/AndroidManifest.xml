@@ -48,6 +48,9 @@
             android:parentActivityName=".GuideActivity"/>
         <activity android:name=".DialogActivity"
             android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
+        <activity android:name=".LoggerActivity"
+            android:label="@string/logger_framework"
+            android:parentActivityName=".GuideActivity"/>
     </application>
 
 </manifest>

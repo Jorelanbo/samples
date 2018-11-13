@@ -4,4 +4,5 @@
     <string name="life_cycle">life cycle</string>
     <string name="fragment_life_cycle">fragment life cycle</string>
     <string name="main_page">main page</string>
+    <string name="logger_framework">logger framework</string>
 </resources>
