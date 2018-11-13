@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 
 import com.js.sample.R;
 
+
 public class LifeCycleFragment extends Fragment {
     private static final String TAG = "FragmentLifeCycle";
 
