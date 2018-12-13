@@ -16,17 +16,29 @@ public class GuideActivity extends AppCompatActivity {
         setContentView(R.layout.activity_guide);
     }
 
+    /**
+     *  主页面
+     * @param view view
+     */
     public void clickMain(View view) {
         Intent intent = new Intent();
         intent.setClass(this, MainActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * activity 生命周期
+     * @param view view
+     */
     public void clickActivityLifeCycle(View view) {
         Intent intent = new Intent(this, LifeCycleActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * fragment 生命周期
+     * @param view view
+     */
     public void clickFragmentLifeCycle(View view) {
         Intent intent = new Intent(this, FragmentLifeCycleActivity.class);
         startActivity(intent);
@@ -35,7 +47,7 @@ public class GuideActivity extends AppCompatActivity {
     /**
      *
      *  窗口模式的activity
-     * @param view
+     * @param view view
      */
     public void clickDialogActivity(View view) {
         Intent intent = new Intent(this, DialogActivity.class);
@@ -45,10 +57,15 @@ public class GuideActivity extends AppCompatActivity {
     /**
      *
      * logger框架
-     * @param view
+     * @param view view
      */
     public void clickLoggerActivity(View view) {
         Intent intent = new Intent(this, LoggerActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickAsyncTask(View view) {
+        Intent intent = new Intent(this, AsyncTaskActivity.class);
         startActivity(intent);
     }
 }

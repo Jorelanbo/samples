@@ -12,6 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <!--添加 parentActivityName 属性可以有返回上一级按钮-->
         <activity
             android:name=".MainActivity"
             android:label="@string/main_page"
@@ -36,7 +37,8 @@
 
         <service
             android:name=".service.FirstService"
-            android:label="@string/first_service" />
+            android:label="@string/first_service"
+            android:parentActivityName=".GuideActivity"/>
 
         <activity
             android:name=".LifeCycleActivity"
@@ -47,9 +49,12 @@
             android:label="@string/fragment_life_cycle"
             android:parentActivityName=".GuideActivity"/>
         <activity android:name=".DialogActivity"
-            android:theme="@style/Base.Theme.AppCompat.Dialog"></activity>
+            android:parentActivityName=".GuideActivity"/>
         <activity android:name=".LoggerActivity"
             android:label="@string/logger_framework"
+            android:parentActivityName=".GuideActivity"/>
+        <activity android:name=".AsyncTaskActivity"
+            android:label="@string/async_task"
             android:parentActivityName=".GuideActivity"/>
     </application>
 
