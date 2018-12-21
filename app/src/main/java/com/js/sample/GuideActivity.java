@@ -64,8 +64,23 @@ public class GuideActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     *
+     * 使用AsyncTask异步类
+     * @param view view
+     */
     public void clickAsyncTask(View view) {
         Intent intent = new Intent(this, AsyncTaskActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     *
+     * 使用AsyncTask异步类
+     * @param view view
+     */
+    public void clickDrawerActivity(View view) {
+        Intent intent = new Intent(this, DrawerActivity.class);
         startActivity(intent);
     }
 }

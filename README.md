@@ -12,3 +12,5 @@ DialogActivity：  Show a DialogActivity
 LoggerActivity：  Use Logger framework for a try
 
 AsyncTaskActivity:   Test AsyncTask
+
+DrawerLayout:  Show a DrawerLayout
