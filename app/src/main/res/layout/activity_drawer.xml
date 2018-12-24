@@ -1,6 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EEEEEE">
+
+        <EditText
+            android:id="@+id/inlicude2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:hint="@string/commo_hint"
+            android:inputType="text" />
+
+        <FrameLayout
+            android:id="@+id/fl_drawerlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inlicude2"
+            android:layout_above="@id/textview"/>
+        
+        <TextView
+            android:id="@+id/textview"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BFBFBF"
+            android:layout_above="@id/include"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Button
+            android:id="@+id/include"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_left_menus"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:layout_gravity="start"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test_words"/>
+    </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>

@@ -6,4 +6,6 @@
     <string name="main_page">main page</string>
     <string name="logger_framework">logger framework</string>
     <string name="async_task">AsyncTask</string>
+    <string name="commo_hint">请输入内容</string>
+    <string name="test_words">This is test words.</string>
 </resources>
