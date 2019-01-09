@@ -76,7 +76,7 @@ public class GuideActivity extends AppCompatActivity {
 
     /**
      *
-     * 使用AsyncTask异步类
+     * 使用显示抽屉布局
      * @param view view
      */
     public void clickDrawerActivity(View view) {
