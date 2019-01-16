@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">sample</string>
+    <string name="app_name">JS_Samples</string>
     <string name="first_service">first service</string>
     <string name="life_cycle">life cycle</string>
     <string name="fragment_life_cycle">fragment life cycle</string>
@@ -8,4 +8,5 @@
     <string name="async_task">AsyncTask</string>
     <string name="common_hint">请输入内容</string>
     <string name="test_words">This is test words.</string>
+    <string name="comfirm">确认</string>
 </resources>

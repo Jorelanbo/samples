@@ -57,4 +57,11 @@
         android:text="抽屉布局"
         android:onClick="clickDrawerActivity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="使用百度定位SDK"
+        android:onClick="clickBaiduLocationActivity"/>
+
 </LinearLayout>

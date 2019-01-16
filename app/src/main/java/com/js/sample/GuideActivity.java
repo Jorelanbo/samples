@@ -83,4 +83,14 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DrawerActivity.class);
         startActivity(intent);
     }
+
+    /**
+     *
+     * 使用百度地图SDK
+     * @param view view
+     */
+    public void clickBaiduLocationActivity(View view) {
+        Intent intent = new Intent(this, BaiduLocationActivity.class);
+        startActivity(intent);
+    }
 }

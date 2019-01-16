@@ -13,4 +13,6 @@ LoggerActivity：  Use Logger framework for a try
 
 AsyncTaskActivity:   Test AsyncTask
 
-DrawerLayout:  Show a DrawerLayout
+DrawerActivity:  Show a DrawerLayout
+
+BaiduLocationActivity: Use Baidu Location

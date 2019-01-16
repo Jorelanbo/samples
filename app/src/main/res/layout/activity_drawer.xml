@@ -28,16 +28,18 @@
         <TextView
             android:id="@+id/textview"
             android:layout_width="match_parent"
-            android:layout_height="1dp"
+            android:layout_height="20dp"
             android:background="#BFBFBF"
             android:layout_above="@id/include"
             android:layout_alignParentStart="true"
+            android:text="@string/test_words"
             android:layout_alignParentLeft="true"/>
 
         <Button
             android:id="@+id/include"
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:text="@string/comfirm"
             android:layout_alignParentBottom="true"/>
     </RelativeLayout>
 
