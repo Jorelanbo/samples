@@ -4,6 +4,7 @@ package com.js.sample.utils;
 
 import android.content.Context;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.baidu.location.BDAbstractLocationListener;
 import com.baidu.location.BDLocation;
@@ -160,6 +161,7 @@ public class BDLocationUtils {
             }
 
             Log.i("BaiduLocation", sb.toString());
+            Toast.makeText(context, sb.toString(), Toast.LENGTH_SHORT).show();
 
             // 现在已经定位成功，可以将定位的数据保存下来，这里我新建的一个Const类，保存全局静态变量
             Const.LONGITUDE = bdLocation.getLongitude();

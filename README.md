@@ -16,3 +16,5 @@ AsyncTaskActivity:   Test AsyncTask
 DrawerActivity:  Show a DrawerLayout
 
 BaiduLocationActivity: Use Baidu Location
+
+ArcGisActivity: Use arcgis-android:100.4.0 SDK

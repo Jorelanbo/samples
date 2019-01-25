@@ -1,67 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="主页面"
-        android:onClick="clickMain"/>
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="activity 的生命周期"
-        android:onClick="clickActivityLifeCycle"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="fragment 的生命周期"
-        android:onClick="clickFragmentLifeCycle"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="窗口模式的activity"
-        android:onClick="clickDialogActivity"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="主页面"
+            android:onClick="clickMain"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="Logger框架应用"
-        android:onClick="clickLoggerActivity"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="activity 的生命周期"
+            android:onClick="clickActivityLifeCycle"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="AsyncTask 实现异步任务"
-        android:onClick="clickAsyncTask"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="fragment 的生命周期"
+            android:onClick="clickFragmentLifeCycle"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="抽屉布局"
-        android:onClick="clickDrawerActivity"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="窗口模式的activity"
+            android:onClick="clickDialogActivity"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:text="使用百度定位SDK"
-        android:onClick="clickBaiduLocationActivity"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="Logger框架应用"
+            android:onClick="clickLoggerActivity"/>
 
-</LinearLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="AsyncTask 实现异步任务"
+            android:onClick="clickAsyncTask"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="抽屉布局"
+            android:onClick="clickDrawerActivity"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="使用百度定位SDK"
+            android:onClick="clickBaiduLocationActivity"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="使用ArcGIS MapView"
+            android:onClick="clickArcGISActivity"/>
+
+    </LinearLayout>
+
+</ScrollView>
