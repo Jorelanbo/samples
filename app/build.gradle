@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin :use greendao 3
 
 android {
     compileSdkVersion 28
@@ -40,6 +41,15 @@ android {
     }
 }
 
+//:use greendao 4
+greendao {
+    schemaVersion 1 //数据库版本号
+    daoPackage 'com.js.sample.gen'// 设置DaoMaster、DaoSession、Dao 包名
+    targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录
+    generateTests false //设置为true以自动生成单元测试。
+    targetGenDirTests 'src/main/java' //应存储生成的单元测试的基本目录。默认为 src / androidTest / java。
+}
+
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'
@@ -50,4 +60,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.5.0'
     implementation files('libs/BaiduLBS_Android.jar')
     implementation 'com.esri.arcgisruntime:arcgis-android:100.4.0'
+    implementation 'org.greenrobot:greendao:3.2.2' // add library :use greendao 3
 }

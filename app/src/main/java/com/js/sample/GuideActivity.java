@@ -102,4 +102,9 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ArcGisActivity.class);
         startActivity(intent);
     }
+
+    public void clickGreenDaoActivity(View view) {
+        Intent intent = new Intent(this, GreenDaoActivity.class);
+        startActivity(intent);
+    }
 }
