@@ -2,7 +2,6 @@ package com.js.sample.db;
 
 // Created by JS on 2019/1/28.
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.Log;
 import android.widget.Toast;
@@ -12,7 +11,6 @@ import com.js.sample.entity.User;
 import com.js.sample.gen.DaoSession;
 import com.js.sample.gen.UserDao;
 
-import java.util.List;
 
 public class GreenDaoService {
     private static final String TAG = "GreenDaoService";
