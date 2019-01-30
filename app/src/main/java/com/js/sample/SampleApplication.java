@@ -11,9 +11,10 @@ import com.js.sample.gen.DaoSession;
 
 public class SampleApplication extends Application {
 
-    private static DaoSession daoSession;
-    private static DaoMaster daoMaster;
-    private static SampleApplication sSampleApplication;
+
+    public static DaoSession daoSession;
+    public static DaoMaster daoMaster;
+    public static SampleApplication sSampleApplication;
 
     public static SampleApplication getInstance(){
         if (sSampleApplication == null) {
