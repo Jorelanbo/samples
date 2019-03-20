@@ -95,6 +95,7 @@ public class GuideActivity extends AppCompatActivity {
     }
 
     /**
+     *
      * 使用ArcGis
      * @param view view
      */
@@ -103,8 +104,23 @@ public class GuideActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     *
+     * 使用GreenDao
+     * @param view view
+     */
     public void clickGreenDaoActivity(View view) {
         Intent intent = new Intent(this, GreenDaoActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     *
+     * splash页面
+     * @param view view
+     */
+    public void clickSplashActivity(View view) {
+        Intent intent = new Intent(this, SplashActivity.class);
         startActivity(intent);
     }
 }
