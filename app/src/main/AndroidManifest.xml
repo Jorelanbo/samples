@@ -88,7 +88,9 @@
             android:parentActivityName=".GuideActivity"/>
         <activity android:name=".GreenDaoActivity"
             android:parentActivityName=".GuideActivity"/>
-
+        <activity android:name=".SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme"/>
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
