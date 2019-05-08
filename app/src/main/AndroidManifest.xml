@@ -91,6 +91,9 @@
         <activity android:name=".SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"/>
+        <activity android:name=".PopDropdownActivity"
+            android:parentActivityName=".GuideActivity"/>
+
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"

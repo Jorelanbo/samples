@@ -22,3 +22,5 @@ ArcGisActivity: Use arcgis-android:100.4.0 SDK
 GreenDaoActivity: Use greendao:3.2.2
 
 SplashActivity: A splash page
+
+PopDropdownActivity: Use self-control SpinnerPopupWindow 
