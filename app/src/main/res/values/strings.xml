@@ -9,4 +9,5 @@
     <string name="common_hint">请输入内容</string>
     <string name="test_words">This is test words.</string>
     <string name="comfirm">确认</string>
+    <string name="cancel">取消</string>
 </resources>

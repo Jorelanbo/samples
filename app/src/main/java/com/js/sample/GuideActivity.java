@@ -123,4 +123,14 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SplashActivity.class);
         startActivity(intent);
     }
+
+    /**
+     *
+     * 自定义下拉框页面
+     * @param view view
+     */
+    public void clickPopDropdownActivity(View view) {
+        Intent intent = new Intent(this, PopDropdownActivity.class);
+        startActivity(intent);
+    }
 }
