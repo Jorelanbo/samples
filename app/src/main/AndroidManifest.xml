@@ -93,6 +93,8 @@
             android:theme="@style/SplashTheme"/>
         <activity android:name=".PopDropdownActivity"
             android:parentActivityName=".GuideActivity"/>
+        <activity android:name=".SingleClickTestActivity"
+            android:parentActivityName=".GuideActivity"/>
 
         <service
             android:name="com.baidu.location.f"

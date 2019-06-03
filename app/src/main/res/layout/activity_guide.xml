@@ -99,6 +99,13 @@
             android:text="自定义下拉框页面"
             android:onClick="clickPopDropdownActivity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="防止多次点击页面"
+            android:onClick="clickSingleClickTestActivity"/>
+
     </LinearLayout>
 
 </ScrollView>

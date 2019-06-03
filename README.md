@@ -23,4 +23,6 @@ GreenDaoActivity: Use greendao:3.2.2
 
 SplashActivity: A splash page
 
-PopDropdownActivity: Use self-control SpinnerPopupWindow 
+PopDropdownActivity: Use self-control SpinnerPopupWindow
+
+SingleClickTestActivity: Use CustomOnclickListener to prevent multiple click

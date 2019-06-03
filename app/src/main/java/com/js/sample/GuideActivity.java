@@ -133,4 +133,13 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PopDropdownActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 测试防止多次点击页面
+     * @param view view
+     */
+    public void clickSingleClickTestActivity(View view) {
+        Intent intent = new Intent(this, SingleClickTestActivity.class);
+        startActivity(intent);
+    }
 }
