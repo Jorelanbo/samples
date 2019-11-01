@@ -42,6 +42,9 @@ public class BDLocationUtils {
         // 可选，默认高精度，设置定位模式，高精度、低功耗、仅设备
         option.setLocationMode(LocationClientOption.LocationMode.Hight_Accuracy);
 
+        option.setOpenAutoNotifyMode();
+        option.setOpenAutoNotifyMode(3000,1, LocationClientOption.LOC_SENSITIVITY_HIGHT);
+
         // 可选，默认gcj02，设置返回的定位结果坐标系
         option.setCoorType("bd0911");
 

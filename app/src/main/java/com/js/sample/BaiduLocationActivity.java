@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.js.sample.utils.BDLocationUtils;
+import com.js.sample.utils.PermissionUtil;
 
 
 // Created by JS on 2019/1/15.
@@ -19,6 +20,7 @@ public class BaiduLocationActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baidulocation);
+        PermissionUtil.checkLocationPermission(this);
         utils = new BDLocationUtils(BaiduLocationActivity.this);
     }
 
