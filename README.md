@@ -26,3 +26,5 @@ SplashActivity: A splash page
 PopDropdownActivity: Use self-control SpinnerPopupWindow
 
 SingleClickTestActivity: Use CustomOnclickListener to prevent multiple click
+
+ServiceTestActivity: Use 3 ways to start a service

@@ -1,12 +1,10 @@
 package com.js.sample;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Toast;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -140,6 +138,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickSingleClickTestActivity(View view) {
         Intent intent = new Intent(this, SingleClickTestActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 测试三种服务的工作方式
+     * @param view view
+     */
+    public void clickServiceTestActivity(View view) {
+        Intent intent = new Intent(this, ServiceTestActivity.class);
         startActivity(intent);
     }
 }

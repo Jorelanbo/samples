@@ -95,11 +95,28 @@
             android:parentActivityName=".GuideActivity"/>
         <activity android:name=".SingleClickTestActivity"
             android:parentActivityName=".GuideActivity"/>
+        <activity android:name=".ServiceTestActivity"
+            android:parentActivityName=".GuideActivity"/>
+        <activity android:name=".IntentServiceActivity"
+            android:parentActivityName=".ServiceTestActivity"/>
+        <activity android:name=".NormalServiceActivity"
+            android:parentActivityName=".ServiceTestActivity"/>
+        <activity android:name=".BindingServiceActivity"
+            android:parentActivityName=".ServiceTestActivity"/>
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote"/>
+        <service android:name=".service.HelloIntentService"
+            android:exported="false"
+            android:description="@string/intent_service_description"/>
+        <service android:name=".service.NormalService"
+            android:exported="false"
+            android:description="@string/normal_service_description"/>
+        <service android:name=".service.BindingService"
+            android:exported="false"
+            android:description="@string/binding_service_description"/>
     </application>
 
 </manifest>
