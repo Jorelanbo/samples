@@ -149,4 +149,13 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ServiceTestActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 可拖拽的recyclerview
+     * @param view view
+     */
+    public void clickDraggableRecyclerView(View view) {
+        Intent intent = new Intent(this, DraggableRecyclerviewActivity.class);
+        startActivity(intent);
+    }
 }

@@ -113,6 +113,13 @@
             android:text="服务测试"
             android:onClick="clickServiceTestActivity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="可拖拽的recyclerview"
+            android:onClick="clickDraggableRecyclerView"/>
+
     </LinearLayout>
 
 </ScrollView>
