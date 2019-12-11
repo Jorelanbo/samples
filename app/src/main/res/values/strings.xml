@@ -13,4 +13,10 @@
     <string name="intent_service_description">这是service_demo应用开启的一个IntentService服务。</string>
     <string name="normal_service_description">这是service_demo应用开启的一个Service服务</string>
     <string name="binding_service_description">这是service_demo应用开启的一个BindingService服务</string>
+
+    <string name="main_page_text">主页</string>
+    <string name="friends_page_text">好友</string>
+    <string name="explore_page_text">探索</string>
+    <string name="mine_page_text">我的</string>
+    <string name="center_button">中间按钮</string>
 </resources>

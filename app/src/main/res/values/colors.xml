@@ -8,4 +8,6 @@
     <color name="orange">#FF6600</color>
     <color name="grey">#ddd</color>
     <color name="light_grey">#ffeeeeee</color>
+    <color name="bottom_radio_button_check">#536FD6</color>
+    <color name="bottom_radio_button_default">#666</color>
 </resources>
