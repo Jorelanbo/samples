@@ -160,4 +160,13 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, DraggableRecyclerviewActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 用RadioButton实现的底部菜单
+     * @param view view
+     */
+    public void clickBottomMenuActivity(View view) {
+        Intent intent = new Intent(this, BottomMenuActivity.class);
+        startActivity(intent);
+    }
 }

@@ -104,7 +104,9 @@
         <activity android:name=".activity.BindingServiceActivity"
             android:parentActivityName=".activity.ServiceTestActivity"/>
         <activity android:name=".activity.DraggableRecyclerviewActivity"
-            android:parentActivityName=".activity.GuideActivity" />
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.BottomMenuActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
 
         <service
             android:name="com.baidu.location.f"
