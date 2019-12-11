@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import com.js.sample.R;
 import com.js.sample.db.GreenDaoService;
 import com.js.sample.entity.User;
 

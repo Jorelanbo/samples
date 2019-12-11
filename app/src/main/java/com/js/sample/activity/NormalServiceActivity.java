@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.js.sample.service.HelloIntentService;
+import com.js.sample.R;
 import com.js.sample.service.NormalService;
 
 

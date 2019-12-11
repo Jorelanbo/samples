@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.listener;
 
 import android.view.View;
 

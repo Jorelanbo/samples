@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+
+import com.js.sample.R;
 
 
 // Created by JS on 2018/12/13.

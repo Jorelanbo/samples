@@ -1,8 +1,10 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import com.js.sample.R;
 
 public class LifeCycleActivity extends AppCompatActivity {
     private static final String TAG = "LifeCycleActivity";

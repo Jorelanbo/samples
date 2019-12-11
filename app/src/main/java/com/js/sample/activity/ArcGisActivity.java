@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.content.pm.PackageManager;
 import android.os.Bundle;
@@ -16,6 +16,7 @@ import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.Basemap;
 import com.esri.arcgisruntime.mapping.view.GeoView;
 import com.esri.arcgisruntime.mapping.view.MapView;
+import com.js.sample.R;
 
 import java.io.BufferedReader;
 import java.io.File;

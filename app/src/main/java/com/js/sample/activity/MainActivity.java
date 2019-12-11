@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -17,6 +17,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import com.js.sample.R;
 
 import java.io.File;
 import java.io.FileOutputStream;

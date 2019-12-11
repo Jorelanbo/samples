@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.js.sample.R;
 import com.js.sample.service.BindingService;
-import com.js.sample.service.HelloIntentService;
 
 
 public class BindingServiceActivity extends AppCompatActivity {

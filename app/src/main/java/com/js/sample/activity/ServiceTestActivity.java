@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.js.sample.R;
+import com.js.sample.activity.BindingServiceActivity;
+import com.js.sample.activity.IntentServiceActivity;
+import com.js.sample.activity.NormalServiceActivity;
 
 
 // Created by JS on 2019/11/1.

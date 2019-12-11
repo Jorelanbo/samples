@@ -38,11 +38,11 @@
 
         <!--添加 parentActivityName 属性可以有返回上一级按钮-->
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/main_page"
-            android:parentActivityName=".GuideActivity"
+            android:parentActivityName=".activity.GuideActivity"
             android:launchMode="singleTask"/>
-        <activity android:name=".GuideActivity">
+        <activity android:name=".activity.GuideActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -65,46 +65,46 @@
             android:parentActivityName=".GuideActivity"/>
 
         <activity
-            android:name=".LifeCycleActivity"
+            android:name=".activity.LifeCycleActivity"
             android:label="@string/life_cycle"
-            android:parentActivityName=".GuideActivity"/>
+            android:parentActivityName=".activity.GuideActivity"/>
         <activity
-            android:name=".FragmentLifeCycleActivity"
+            android:name=".activity.FragmentLifeCycleActivity"
             android:label="@string/fragment_life_cycle"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".DialogActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".LoggerActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.DialogActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.LoggerActivity"
             android:label="@string/logger_framework"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".AsyncTaskActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.AsyncTaskActivity"
             android:label="@string/async_task"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".DrawerActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".BaiduLocationActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".ArcGisActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".GreenDaoActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".SplashActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.DrawerActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.BaiduLocationActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.ArcGisActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.GreenDaoActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"/>
-        <activity android:name=".PopDropdownActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".SingleClickTestActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".ServiceTestActivity"
-            android:parentActivityName=".GuideActivity"/>
-        <activity android:name=".IntentServiceActivity"
-            android:parentActivityName=".ServiceTestActivity"/>
-        <activity android:name=".NormalServiceActivity"
-            android:parentActivityName=".ServiceTestActivity"/>
-        <activity android:name=".BindingServiceActivity"
-            android:parentActivityName=".ServiceTestActivity"/>
-        <activity android:name=".DraggableRecyclerviewActivity"
-            android:parentActivityName=".GuideActivity" />
+        <activity android:name=".activity.PopDropdownActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.SingleClickTestActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.ServiceTestActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.IntentServiceActivity"
+            android:parentActivityName=".activity.ServiceTestActivity"/>
+        <activity android:name=".activity.NormalServiceActivity"
+            android:parentActivityName=".activity.ServiceTestActivity"/>
+        <activity android:name=".activity.BindingServiceActivity"
+            android:parentActivityName=".activity.ServiceTestActivity"/>
+        <activity android:name=".activity.DraggableRecyclerviewActivity"
+            android:parentActivityName=".activity.GuideActivity" />
 
         <service
             android:name="com.baidu.location.f"

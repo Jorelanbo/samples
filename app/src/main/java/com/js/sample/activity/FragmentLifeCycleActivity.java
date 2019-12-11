@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import com.js.sample.R;
 import com.js.sample.fragment.LifeCycleFragment;
 
 public class FragmentLifeCycleActivity extends AppCompatActivity {

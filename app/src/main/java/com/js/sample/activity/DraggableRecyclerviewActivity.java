@@ -1,4 +1,4 @@
-package com.js.sample;
+package com.js.sample.activity;
 
 import android.graphics.Color;
 import android.graphics.Rect;
@@ -11,6 +11,7 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 import android.view.View;
 
+import com.js.sample.R;
 import com.js.sample.adapter.DraggableRecyclerViewAdapter;
 import com.js.sample.bean.ItemBean;
 import com.js.sample.callback.CustomItemTouchCallback;
