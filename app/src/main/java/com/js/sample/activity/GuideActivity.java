@@ -169,4 +169,13 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, BottomMenuActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 使用ConstraintLayout
+     * @param view view
+     */
+    public void clickConstraintLayoutActivity(View view) {
+        Intent intent = new Intent(this, ConstraintLayoutActivity.class);
+        startActivity(intent);
+    }
 }

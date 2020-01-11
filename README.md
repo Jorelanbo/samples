@@ -32,3 +32,5 @@ ServiceTestActivity: Use 3 ways to start a service
 DraggableRecyclerviewActivity: Use ItemTouchHelper to make recyclerview draggable
 
 BottomMenuActivity: Use RadioButton to make button menu
+
+ConstraintLayoutActivity: Use ConstraintLayout

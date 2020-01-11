@@ -107,6 +107,8 @@
             android:parentActivityName=".activity.GuideActivity"/>
         <activity android:name=".activity.BottomMenuActivity"
             android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".activity.ConstraintLayoutActivity"
+            android:parentActivityName=".activity.GuideActivity" />
 
         <service
             android:name="com.baidu.location.f"

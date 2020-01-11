@@ -127,6 +127,13 @@
             android:text="基于RadioButton的底部菜单"
             android:onClick="clickBottomMenuActivity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="ConstraintLayout的使用"
+            android:onClick="clickConstraintLayoutActivity"/>
+
     </LinearLayout>
 
 </ScrollView>
