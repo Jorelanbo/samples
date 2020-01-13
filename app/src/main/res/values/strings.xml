@@ -19,4 +19,6 @@
     <string name="explore_page_text">探索</string>
     <string name="mine_page_text">我的</string>
     <string name="center_button">中间按钮</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_more">more</string>
 </resources>

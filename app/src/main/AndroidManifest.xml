@@ -109,6 +109,16 @@
             android:parentActivityName=".activity.GuideActivity"/>
         <activity android:name=".activity.ConstraintLayoutActivity"
             android:parentActivityName=".activity.GuideActivity" />
+        <activity android:name=".activity.materialDesign.MaterialDesignActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity android:name=".activity.materialDesign.BottomSheetSampleActivity"
+            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"/>
+        <activity android:name=".activity.materialDesign.CollapsingToolbarLayoutActivity"
+            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.materialDesign.CoordinatorLayoutScrollActivity"
+            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"
+            android:theme="@style/AppNoActionBarTheme"/>
 
         <service
             android:name="com.baidu.location.f"

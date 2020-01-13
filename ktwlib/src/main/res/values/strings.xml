@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ktwlib</string>
+    <string name="comfirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="login_in">登\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020录</string>
+    <string name="exit_system">退出程序</string>
+    <string name="confirm_exit">确认退出程序？</string>
+    <string name="exit">退出</string>
+    <string name="exit_remind">正在编辑内容，确认退出？</string>
+    <string name="logout">退出登录</string>
+    <string name="logout_notice">确认退出登录并保存轨迹？</string>
+</resources>

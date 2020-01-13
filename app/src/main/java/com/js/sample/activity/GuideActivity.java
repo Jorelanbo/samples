@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.js.sample.R;
+import com.js.sample.activity.materialDesign.MaterialDesignActivity;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -176,6 +177,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickConstraintLayoutActivity(View view) {
         Intent intent = new Intent(this, ConstraintLayoutActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 使用MaterialDesign
+     * @param view view
+     */
+    public void clickMaterialDesigntActivity(View view) {
+        Intent intent = new Intent(this, MaterialDesignActivity.class);
         startActivity(intent);
     }
 }
