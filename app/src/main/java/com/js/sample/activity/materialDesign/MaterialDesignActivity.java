@@ -36,8 +36,21 @@ public class MaterialDesignActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * 跳转到CoordinatorLayout滑动使用页面
+     * @param view view
+     */
     public void clickCoordinatorLayoutScrollActivity(View view) {
         Intent intent = new Intent(this, CoordinatorLayoutScrollActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转到浮动按钮使用页面
+     * @param view view
+     */
+    public void clickFloatActionButtonActivity(View view) {
+        Intent intent = new Intent(this, FloatActionButtonActivity.class);
         startActivity(intent);
     }
 }

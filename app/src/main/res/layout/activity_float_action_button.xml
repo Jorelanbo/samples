@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.materialDesign.FloatActionButtonActivity">
+
+    <Button
+        android:id="@+id/btn_anchor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="作为锚点的按钮"
+        android:layout_gravity="center"
+        android:background="@color/text_color_light_blue"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="30dp"
+        app:elevation="10dp"
+        android:src="@android:drawable/ic_dialog_map"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="30dp"
+        android:src="@android:drawable/ic_menu_camera"
+        app:elevation="20dp"
+        app:fabSize="mini"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|top"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@android:drawable/ic_btn_speak_now"
+        app:elevation="30dp"
+        app:fabSize="mini"
+        app:layout_anchor="@id/btn_anchor"
+        app:layout_anchorGravity="end|bottom" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|top"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@android:drawable/ic_dialog_email"
+        app:elevation="40dp"
+        app:fabSize="auto"
+        app:backgroundTint="@color/text_color_light_blue_pre"
+        app:rippleColor="@color/light_blue"/>
+
+</android.support.design.widget.CoordinatorLayout>

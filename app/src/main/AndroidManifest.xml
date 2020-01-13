@@ -119,6 +119,8 @@
         <activity android:name=".activity.materialDesign.CoordinatorLayoutScrollActivity"
             android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"
             android:theme="@style/AppNoActionBarTheme"/>
+        <activity android:name=".activity.materialDesign.FloatActionButtonActivity"
+            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"/>
 
         <service
             android:name="com.baidu.location.f"
