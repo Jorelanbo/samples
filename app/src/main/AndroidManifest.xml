@@ -2,26 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.js.sample">
 
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 这个权限用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
-    <!-- 这个权限用于访问GPS定位-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
-    <!-- 用于读取手机当前的状态-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <!-- 访问网络，网络定位需要上网-->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- SD卡读取权限，用户写入离线定位数据-->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
-    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
     <application
         android:name=".SampleApplication"
@@ -30,18 +24,19 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--添加百度定位的KEY-->
+        <activity
+            android:name=".activity.materialDesign.SystemNavigationActivity"
+            android:label="@string/title_activity_system_navigation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <!-- 添加百度定位的KEY -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="OA7PC98u5rqm284qSCzvXn7WjQZahgvA" >
-        </meta-data>
-
-        <!--添加 parentActivityName 属性可以有返回上一级按钮-->
+            android:value="OA7PC98u5rqm284qSCzvXn7WjQZahgvA"></meta-data> <!-- 添加 parentActivityName 属性可以有返回上一级按钮 -->
         <activity
             android:name=".activity.MainActivity"
             android:label="@string/main_page"
-            android:parentActivityName=".activity.GuideActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleTask"
+            android:parentActivityName=".activity.GuideActivity" />
         <activity android:name=".activity.GuideActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -62,79 +57,107 @@
         <service
             android:name=".service.FirstService"
             android:label="@string/first_service"
-            android:parentActivityName=".GuideActivity"/>
+            android:parentActivityName=".GuideActivity" />
 
         <activity
             android:name=".activity.LifeCycleActivity"
             android:label="@string/life_cycle"
-            android:parentActivityName=".activity.GuideActivity"/>
+            android:parentActivityName=".activity.GuideActivity" />
         <activity
             android:name=".activity.FragmentLifeCycleActivity"
             android:label="@string/fragment_life_cycle"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.DialogActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.LoggerActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.DialogActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.LoggerActivity"
             android:label="@string/logger_framework"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.AsyncTaskActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.AsyncTaskActivity"
             android:label="@string/async_task"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.DrawerActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.BaiduLocationActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.ArcGisActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.GreenDaoActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.SplashActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.DrawerActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.BaiduLocationActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.ArcGisActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.GreenDaoActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.SplashActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme"/>
-        <activity android:name=".activity.PopDropdownActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.SingleClickTestActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.ServiceTestActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.IntentServiceActivity"
-            android:parentActivityName=".activity.ServiceTestActivity"/>
-        <activity android:name=".activity.NormalServiceActivity"
-            android:parentActivityName=".activity.ServiceTestActivity"/>
-        <activity android:name=".activity.BindingServiceActivity"
-            android:parentActivityName=".activity.ServiceTestActivity"/>
-        <activity android:name=".activity.DraggableRecyclerviewActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.BottomMenuActivity"
-            android:parentActivityName=".activity.GuideActivity"/>
-        <activity android:name=".activity.ConstraintLayoutActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".activity.PopDropdownActivity"
             android:parentActivityName=".activity.GuideActivity" />
-        <activity android:name=".activity.materialDesign.MaterialDesignActivity"
+        <activity
+            android:name=".activity.SingleClickTestActivity"
             android:parentActivityName=".activity.GuideActivity" />
-        <activity android:name=".activity.materialDesign.BottomSheetSampleActivity"
-            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"/>
-        <activity android:name=".activity.materialDesign.CollapsingToolbarLayoutActivity"
+        <activity
+            android:name=".activity.ServiceTestActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.IntentServiceActivity"
+            android:parentActivityName=".activity.ServiceTestActivity" />
+        <activity
+            android:name=".activity.NormalServiceActivity"
+            android:parentActivityName=".activity.ServiceTestActivity" />
+        <activity
+            android:name=".activity.BindingServiceActivity"
+            android:parentActivityName=".activity.ServiceTestActivity" />
+        <activity
+            android:name=".activity.DraggableRecyclerviewActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.BottomMenuActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.ConstraintLayoutActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.materialDesign.MaterialDesignActivity"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity
+            android:name=".activity.materialDesign.BottomSheetSampleActivity"
+            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity" />
+        <activity
+            android:name=".activity.materialDesign.CollapsingToolbarLayoutActivity"
             android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activity.materialDesign.CoordinatorLayoutScrollActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".activity.materialDesign.CoordinatorLayoutScrollActivity"
             android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"
-            android:theme="@style/AppNoActionBarTheme"/>
-        <activity android:name=".activity.materialDesign.FloatActionButtonActivity"
-            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"/>
+            android:theme="@style/AppNoActionBarTheme" />
+        <activity
+            android:name=".activity.materialDesign.FloatActionButtonActivity"
+            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity" />
+        <activity
+            android:name=".activity.materialDesign.NavigationViewActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
-            android:process=":remote"/>
-        <service android:name=".service.HelloIntentService"
-            android:exported="false"
-            android:description="@string/intent_service_description"/>
-        <service android:name=".service.NormalService"
-            android:exported="false"
-            android:description="@string/normal_service_description"/>
-        <service android:name=".service.BindingService"
-            android:exported="false"
-            android:description="@string/binding_service_description"/>
+            android:process=":remote" />
+        <service
+            android:name=".service.HelloIntentService"
+            android:description="@string/intent_service_description"
+            android:exported="false" />
+        <service
+            android:name=".service.NormalService"
+            android:description="@string/normal_service_description"
+            android:exported="false" />
+        <service
+            android:name=".service.BindingService"
+            android:description="@string/binding_service_description"
+            android:exported="false" />
     </application>
 
 </manifest>

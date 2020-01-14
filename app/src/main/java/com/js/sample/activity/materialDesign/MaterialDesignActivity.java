@@ -53,4 +53,13 @@ public class MaterialDesignActivity extends AppCompatActivity {
         Intent intent = new Intent(this, FloatActionButtonActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 跳转到NavigationView界面
+     * @param view view
+     */
+    public void clickNavigationViewActivity(View view) {
+        Intent intent = new Intent(this, NavigationViewActivity.class);
+        startActivity(intent);
+    }
 }
