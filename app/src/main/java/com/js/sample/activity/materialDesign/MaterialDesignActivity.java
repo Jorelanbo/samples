@@ -62,4 +62,13 @@ public class MaterialDesignActivity extends AppCompatActivity {
         Intent intent = new Intent(this, NavigationViewActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 跳转到调色板使用页面
+     * @param view view
+     */
+    public void clickPaletteSimpleActivity(View view) {
+        Intent intent = new Intent(this, PaletteSampleActivity.class);
+        startActivity(intent);
+    }
 }
