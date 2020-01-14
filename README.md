@@ -34,3 +34,5 @@ DraggableRecyclerviewActivity: Use ItemTouchHelper to make recyclerview draggabl
 BottomMenuActivity: Use RadioButton to make button menu
 
 ConstraintLayoutActivity: Use ConstraintLayout
+
+MaterialDesignActivity: Use MaterialDesign Components
