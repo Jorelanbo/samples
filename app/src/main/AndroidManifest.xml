@@ -149,6 +149,12 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activity.materialDesign.SnackBarSampleActivity"
             android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"/>
+        <activity android:name=".activity.materialDesign.TabLayoutSampleActivity"
+            android:label="TabLayout"/>
+        <activity android:name=".activity.materialDesign.TabLayoutBasicSampleActivity"
+            android:label="TabLayout"/>
+        <activity android:name=".activity.materialDesign.TabLayoutAndViewPagerActivity"
+            android:label="TabLayout"/>
 
         <service
             android:name="com.baidu.location.f"

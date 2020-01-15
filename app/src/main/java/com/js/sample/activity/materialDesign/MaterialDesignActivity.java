@@ -80,4 +80,13 @@ public class MaterialDesignActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SnackBarSampleActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 跳转到TabLayout示例页面
+     * @param view view
+     */
+    public void clickTabLayoutSimpleActivity(View view) {
+        Intent intent = new Intent(this, TabLayoutSampleActivity.class);
+        startActivity(intent);
+    }
 }
