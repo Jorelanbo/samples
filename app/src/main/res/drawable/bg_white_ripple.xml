@@ -3,7 +3,7 @@
     android:color="@color/white">
     <item>
         <shape>
-            <solid android:color="@color/titlebar_bg_color"/>
+            <solid android:color="@color/app_def_color"/>
         </shape>
     </item>
 </ripple>

@@ -41,4 +41,19 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyHintAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/app_def_color</item>
+    </style>
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#666</item>
+        <item name="colorControlActivated">#000</item>
+    </style>
+
+    <style name="MyTextErrorAppearance" parent="Theme.AppCompat">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">#f00</item>
+    </style>
+
 </resources>

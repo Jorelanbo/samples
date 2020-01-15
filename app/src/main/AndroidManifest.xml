@@ -155,6 +155,8 @@
             android:label="TabLayout"/>
         <activity android:name=".activity.materialDesign.TabLayoutAndViewPagerActivity"
             android:label="TabLayout"/>
+        <activity android:name=".activity.materialDesign.TextInputLayoutSampleActivity"
+            android:label="TextInputLayout"/>
 
         <service
             android:name="com.baidu.location.f"
