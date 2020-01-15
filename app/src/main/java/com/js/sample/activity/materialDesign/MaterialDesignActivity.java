@@ -71,4 +71,13 @@ public class MaterialDesignActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PaletteSampleActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 跳转到snackBar示例页面
+     * @param view view
+     */
+    public void clickSnackBarSimpleActivity(View view) {
+        Intent intent = new Intent(this, SnackBarSampleActivity.class);
+        startActivity(intent);
+    }
 }

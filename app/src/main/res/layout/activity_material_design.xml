@@ -55,6 +55,13 @@
             android:text="PaletteSimple"
             android:onClick="clickPaletteSimpleActivity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="SnackBarSimple"
+            android:onClick="clickSnackBarSimpleActivity"/>
+
     </LinearLayout>
 
 </ScrollView>

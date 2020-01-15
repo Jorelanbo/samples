@@ -147,6 +147,8 @@
             android:parentActivityName=".activity.materialDesign.PaletteSampleActivity"/>
         <activity android:name=".activity.materialDesign.PaletteAdvanceSampleActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.materialDesign.SnackBarSampleActivity"
+            android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"/>
 
         <service
             android:name="com.baidu.location.f"
