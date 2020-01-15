@@ -92,10 +92,19 @@ public class MaterialDesignActivity extends AppCompatActivity {
 
     /**
      * 跳转到TextInputLayout示例页面
-     * @param view
+     * @param view view
      */
     public void clickTextInputLayoutSimpleActivity(View view) {
         Intent intent = new Intent(this, TextInputLayoutSampleActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转到ToolBar示例页面
+     * @param view view
+     */
+    public void clickToolBarSimpleActivity(View view) {
+        Intent intent = new Intent(this, ToolBarSampleActivity.class);
         startActivity(intent);
     }
 }

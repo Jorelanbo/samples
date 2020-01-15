@@ -157,6 +157,9 @@
             android:label="TabLayout"/>
         <activity android:name=".activity.materialDesign.TextInputLayoutSampleActivity"
             android:label="TextInputLayout"/>
+        <activity android:name=".activity.materialDesign.ToolBarSampleActivity"
+            android:label="ToolBarSample"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <service
             android:name="com.baidu.location.f"

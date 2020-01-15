@@ -10,4 +10,5 @@
     <color name="light_grey">#ffeeeeee</color>
     <color name="bottom_radio_button_check">#536FD6</color>
     <color name="bottom_radio_button_default">#666</color>
+    <color name="transparent">#00ffffff</color>
 </resources>
