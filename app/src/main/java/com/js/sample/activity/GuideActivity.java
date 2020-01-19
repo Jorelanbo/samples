@@ -188,4 +188,13 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MaterialDesignActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 使用ViewAnimator做页面切换
+     * @param view view
+     */
+    public void clickViewAnimatorActivity(View view) {
+        Intent intent = new Intent(this, ViewAnimatorActivity.class);
+        startActivity(intent);
+    }
 }

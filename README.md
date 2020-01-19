@@ -36,3 +36,5 @@ BottomMenuActivity: Use RadioButton to make button menu
 ConstraintLayoutActivity: Use ConstraintLayout
 
 MaterialDesignActivity: Use MaterialDesign Components
+
+ViewAnimatorActivity: Use ViewAnimator

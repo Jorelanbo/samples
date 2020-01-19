@@ -160,6 +160,7 @@
         <activity android:name=".activity.materialDesign.ToolBarSampleActivity"
             android:label="ToolBarSample"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activity.ViewAnimatorActivity" />
 
         <service
             android:name="com.baidu.location.f"
