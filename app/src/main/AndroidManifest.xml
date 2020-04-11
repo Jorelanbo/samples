@@ -163,6 +163,12 @@
         <activity android:name=".activity.ViewAnimatorActivity"
             android:label="ViewAnimator"
             android:parentActivityName=".activity.materialDesign.MaterialDesignActivity"/>
+        <activity android:name=".activity.recyclerView.UseRecyclerViewProblemsActivity"
+            android:label="UseRecyclerViewProblems"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity android:name=".activity.recyclerView.ResolveCheckBoxProblemOneActivity"
+            android:label="ResolveCheckBoxProblemOne"
+            android:parentActivityName=".activity.recyclerView.UseRecyclerViewProblemsActivity"/>
 
         <service
             android:name="com.baidu.location.f"

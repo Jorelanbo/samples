@@ -148,6 +148,13 @@
             android:text="使用ViewAnimator做页面切换"
             android:onClick="clickViewAnimatorActivity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="使用RecyclerView的一些问题"
+            android:onClick="clickRecyclerViewProblem"/>
+
     </LinearLayout>
 
 </ScrollView>

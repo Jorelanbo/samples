@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.js.sample.R;
 import com.js.sample.activity.materialDesign.MaterialDesignActivity;
+import com.js.sample.activity.recyclerView.UseRecyclerViewProblemsActivity;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -195,6 +196,11 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickViewAnimatorActivity(View view) {
         Intent intent = new Intent(this, ViewAnimatorActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickRecyclerViewProblem(View view) {
+        Intent intent = new Intent(this, UseRecyclerViewProblemsActivity.class);
         startActivity(intent);
     }
 }
