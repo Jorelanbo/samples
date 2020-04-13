@@ -23,4 +23,14 @@ public class UseRecyclerViewProblemsActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ResolveCheckBoxProblemOneActivity.class);
         startActivity(intent);
     }
+
+    public void clickResolveCheckProblemTwo(View view) {
+        Intent intent = new Intent(this, ResolveCheckBoxProblemTwoActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickSingleCheck(View view) {
+        Intent intent = new Intent(this, CheckBoxSingleCheckActivity.class);
+        startActivity(intent);
+    }
 }

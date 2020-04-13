@@ -39,4 +39,6 @@
     <string name="menu_send">Send</string>
 
     <string name="checkbox_in_recyclerview_one">解决checkbox在recyclerview中使用时出现勾选混乱的第一种解决方法:\n使用onClickListener代替onCheckedChangeListener</string>
+    <string name="checkbox_in_recyclerview_two">解决checkbox在recyclerview中使用时出现勾选混乱的第一种解决方法:\n在setOnCheckedChangeListener之前先将之前的listener置空为null</string>
+    <string name="checkbox_in_recyclerview_single_check">使用onClickListener代替onCheckedChangeListener的方法，实现列表单选</string>
 </resources>

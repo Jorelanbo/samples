@@ -8,16 +8,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/text_color_light_blue_pre"
-        android:text="@string/checkbox_in_recyclerview_one"/>
+        android:text="@string/checkbox_in_recyclerview_single_check"/>
 
     <Button
-        android:id="@+id/bt_show_items"
+        android:id="@+id/bt_show_checked_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="显示选中项"/>
 
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/rv_resolve_one"
+        android:id="@+id/rv_single_check"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

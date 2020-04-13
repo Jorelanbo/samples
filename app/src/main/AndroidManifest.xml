@@ -169,6 +169,12 @@
         <activity android:name=".activity.recyclerView.ResolveCheckBoxProblemOneActivity"
             android:label="ResolveCheckBoxProblemOne"
             android:parentActivityName=".activity.recyclerView.UseRecyclerViewProblemsActivity"/>
+        <activity android:name=".activity.recyclerView.ResolveCheckBoxProblemTwoActivity"
+            android:label="ResolveCheckBoxProblemTwo"
+            android:parentActivityName=".activity.recyclerView.UseRecyclerViewProblemsActivity" />
+        <activity android:name=".activity.recyclerView.CheckBoxSingleCheckActivity"
+            android:label="CheckBoxSingleCheck"
+            android:parentActivityName=".activity.recyclerView.UseRecyclerViewProblemsActivity"/>
 
         <service
             android:name="com.baidu.location.f"

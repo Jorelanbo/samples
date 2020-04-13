@@ -38,3 +38,5 @@ ConstraintLayoutActivity: Use ConstraintLayout
 MaterialDesignActivity: Use MaterialDesign Components
 
 ViewAnimatorActivity: Use ViewAnimator
+
+UseRecyclerViewProblemsActivity: Resolve problems when use recyclerview and checkbox

@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.js.sample.R;
 import com.js.sample.activity.recyclerView.bean.CheckItem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -22,7 +23,8 @@ import java.util.List;
 
 关于这个bug的原因其实很简单，我们都知道RecyclerView和ListView都是做到复用的，当我们Debug的时候你会发现，每当我们划动的时候，由于item被复用，checkbox的选中状态会发生改变，每当我们滑动的时候我们的setOnCheckedChangeListener的代码都会被调用。这就是真正造成我们CheckBox状态异常的元凶。
 
-其实想要解决这个bug其实也很简单，我们只要不使用setOnCheckedChangeListener，将监听器改为setOnClickListener就能解决这个问题。*/
+其实想要解决这个bug其实也很简单，我们只要不使用setOnCheckedChangeListener，将监听器改为setOnClickListener就能解决这个问题，
+因为在setOnCheckedChangeListener中使用notifyDataSetChanged会产生渲染错误。*/
 
 public class ResolveOneAdapter extends RecyclerView.Adapter<ResolveOneAdapter.ViewHolder> {
 
@@ -45,13 +47,10 @@ public class ResolveOneAdapter extends RecyclerView.Adapter<ResolveOneAdapter.Vi
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         CheckItem checkItem = items.get(i);
         viewHolder.mTextView.setText(checkItem.getName());
-        viewHolder.mCheckBox.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                viewHolder.mCheckBox.setChecked(!checkItem.isChecked());
-                checkItem.setChecked(!checkItem.isChecked());
-                notifyDataSetChanged(); // 这里可以重新刷新数据，使用setOnCheckedChangeListener则会报错
-            }
+        viewHolder.mCheckBox.setOnClickListener(v -> {
+            viewHolder.mCheckBox.setChecked(!checkItem.isChecked());
+            checkItem.setChecked(!checkItem.isChecked());
+            notifyDataSetChanged(); // 这里可以重新刷新数据，使用setOnCheckedChangeListener则会报错
         });
         viewHolder.mCheckBox.setChecked(checkItem.isChecked());
     }
@@ -59,6 +58,21 @@ public class ResolveOneAdapter extends RecyclerView.Adapter<ResolveOneAdapter.Vi
     @Override
     public int getItemCount() {
         return items.size();
+    }
+
+    /**
+     *  获取所有选中项
+     * @return 所有选中项
+     */
+    public List<CheckItem> getCheckedItems() {
+        List<CheckItem> checkItems = new ArrayList<>();
+        for (int i = 0; i < items.size(); i ++) {
+            CheckItem item = items.get(i);
+            if (item.isChecked()) {
+                checkItems.add(item);
+            }
+        }
+        return checkItems;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder{

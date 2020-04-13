@@ -8,6 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.js.sample.R;
 import com.js.sample.activity.recyclerView.adapters.ResolveOneAdapter;
@@ -26,6 +27,7 @@ public class ResolveCheckBoxProblemOneActivity extends AppCompatActivity impleme
     private RecyclerView rvResolveOne;
     private Button btShowItems;
     private List<CheckItem> items = new ArrayList<>();
+    private ResolveOneAdapter resolveOneAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -47,7 +49,7 @@ public class ResolveCheckBoxProblemOneActivity extends AppCompatActivity impleme
             items.add(checkItem);
         }
         rvResolveOne.setLayoutManager(new LinearLayoutManager(this));
-        ResolveOneAdapter resolveOneAdapter = new ResolveOneAdapter(this, items);
+        resolveOneAdapter = new ResolveOneAdapter(this, items);
         rvResolveOne.setAdapter(resolveOneAdapter);
     }
 
@@ -55,7 +57,21 @@ public class ResolveCheckBoxProblemOneActivity extends AppCompatActivity impleme
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.bt_show_items:
-                Log.i(TAG, items.toString());
+                List<CheckItem> checkedItems = resolveOneAdapter.getCheckedItems();
+                Toast toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
+                StringBuilder message = new StringBuilder();
+                if (checkedItems.size() > 0) {
+                    message.append("选中项为：");
+                    for (int i = 0; i < checkedItems.size(); i ++) {
+                        CheckItem checkItem = checkedItems.get(i);
+                        message.append("\n").append(checkItem.getName());
+                    }
+                } else {
+                    message.append("当前没有选中任何项！");
+                }
+                // 先给toast的message消息设为空，然后设置要提示的信息，以此解决小米手机toast自带app名称的bug
+                toast.setText(message.toString());
+                toast.show();
                 break;
             default:
                 break;

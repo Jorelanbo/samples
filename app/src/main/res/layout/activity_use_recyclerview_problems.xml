@@ -17,8 +17,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:text="解决checkBox勾选错乱方法1"
+            android:text="用setOnclickListener代替setOnCheckedChangeListener解决checkBox勾选错乱方法"
             android:onClick="clickResolveCheckProblemOne"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="在设置setOnCheckedChangeListener之前将setOnCheckedChangeListener置空为null解决checkBox勾选错乱方法"
+            android:onClick="clickResolveCheckProblemTwo"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="用recyclerview + CheckBox 实现单选效果"
+            android:onClick="clickSingleCheck"/>
 
 
     </LinearLayout>
