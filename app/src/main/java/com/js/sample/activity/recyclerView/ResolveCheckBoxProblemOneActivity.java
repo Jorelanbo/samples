@@ -58,7 +58,6 @@ public class ResolveCheckBoxProblemOneActivity extends AppCompatActivity impleme
         switch (v.getId()) {
             case R.id.bt_show_items:
                 List<CheckItem> checkedItems = resolveOneAdapter.getCheckedItems();
-                Toast toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
                 StringBuilder message = new StringBuilder();
                 if (checkedItems.size() > 0) {
                     message.append("选中项为：");
@@ -70,6 +69,7 @@ public class ResolveCheckBoxProblemOneActivity extends AppCompatActivity impleme
                     message.append("当前没有选中任何项！");
                 }
                 // 先给toast的message消息设为空，然后设置要提示的信息，以此解决小米手机toast自带app名称的bug
+                Toast toast = Toast.makeText(this, "", Toast.LENGTH_LONG);
                 toast.setText(message.toString());
                 toast.show();
                 break;
