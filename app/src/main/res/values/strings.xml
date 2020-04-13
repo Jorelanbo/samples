@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">JS_Samples</string>
+    <string name="app_name">SAMPLES</string>
     <string name="first_service">first service</string>
     <string name="life_cycle">life cycle</string>
     <string name="fragment_life_cycle">fragment life cycle</string>
