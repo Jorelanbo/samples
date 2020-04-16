@@ -1,5 +1,6 @@
 package com.js.sample.activity;
 
+import android.annotation.SuppressLint;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -7,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.widget.Toast;
 
 import com.esri.arcgisruntime.ArcGISRuntimeEnvironment;
@@ -14,8 +16,11 @@ import com.esri.arcgisruntime.data.TileCache;
 import com.esri.arcgisruntime.layers.ArcGISTiledLayer;
 import com.esri.arcgisruntime.mapping.ArcGISMap;
 import com.esri.arcgisruntime.mapping.Basemap;
+import com.esri.arcgisruntime.mapping.view.BackgroundGrid;
+import com.esri.arcgisruntime.mapping.view.DefaultMapViewOnTouchListener;
 import com.esri.arcgisruntime.mapping.view.GeoView;
 import com.esri.arcgisruntime.mapping.view.MapView;
+import com.esri.arcgisruntime.mapping.view.WrapAroundMode;
 import com.js.sample.R;
 
 import java.io.BufferedReader;
@@ -42,6 +47,7 @@ public class ArcGisActivity extends AppCompatActivity {
             "android.permission.WRITE_EXTERNAL_STORAGE"
     };
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,11 +57,26 @@ public class ArcGisActivity extends AppCompatActivity {
 //        // set the map to be displayed in this view
 //        mapView.setMap(map);
         // 去除水印
-//        ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud7736782273,none,4N5X0H4AH5AH2T8AG076");
-        // 去除“powered by Esri”
-//        mapView.setAttributionTextVisible(false);
+        ArcGISRuntimeEnvironment.setLicense("runtimelite,1000,rud7736782273,none,4N5X0H4AH5AH2T8AG076");
+//         去除“powered by Esri”
+        mapView.setAttributionTextVisible(false);
 
+        // 禁止旋转
+        mapView.setOnTouchListener(new DefaultMapViewOnTouchListener(ArcGisActivity.this, mapView) {
+            @Override
+            public boolean onRotate(MotionEvent event, double rotationAngle) {
+                return false;
+            }
+        });
 
+        // 设置环绕模式
+        mapView.setWrapAroundMode(WrapAroundMode.DISABLED);
+
+        BackgroundGrid mainBackgroundGrid = new BackgroundGrid();
+        mainBackgroundGrid.setColor(0xffffffff);
+        mainBackgroundGrid.setGridLineColor(0xffffffff);
+        mainBackgroundGrid.setGridLineWidth(0);
+        mapView.setBackgroundGrid(mainBackgroundGrid);
 
         try {
             //检测是否有写的权限

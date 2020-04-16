@@ -203,4 +203,9 @@ public class GuideActivity extends AppCompatActivity {
         Intent intent = new Intent(this, UseRecyclerViewProblemsActivity.class);
         startActivity(intent);
     }
+
+    public void clickPermissionSplashActivity(View view) {
+        Intent intent = new Intent(this, PermissionSplashActivity.class);
+        startActivity(intent);
+    }
 }

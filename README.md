@@ -40,3 +40,5 @@ MaterialDesignActivity: Use MaterialDesign Components
 ViewAnimatorActivity: Use ViewAnimator
 
 UseRecyclerViewProblemsActivity: Resolve problems when use recyclerview and checkbox
+
+PermissionSplashActivity: A SplashActivity with permission control
