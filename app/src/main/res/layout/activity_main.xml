@@ -96,4 +96,11 @@
         android:onClick="showProgressDialog"
         android:text="进度条对话框"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:onClick="showCustomizeDialog"
+        android:text="自定义样式对话框"/>
+
 </LinearLayout>

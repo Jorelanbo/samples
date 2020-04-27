@@ -14,8 +14,10 @@ import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.js.sample.R;
@@ -268,5 +270,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     }
 
-
+    /**
+     * 显示自定义样式Dialog
+     * @param v
+     */
+    public void showCustomizeDialog(View v) {
+        AlertDialog dialog = new AlertDialog.Builder(this).create();
+        View view = View.inflate(this, R.layout.layout_customize_dialog, null);
+        TextView dialogMessage = view.findViewById(R.id.tv_alert_dialog_message);
+        dialogMessage.setText("这是自己写的消息");
+        Button yesButton = view.findViewById(R.id.tv_alert_dialog_yes);
+        yesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+        dialog.setView(view);
+        dialog.show();
+    }
 }
