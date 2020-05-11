@@ -7,4 +7,5 @@
 /captures
 /.idea
 /app/app.iml
+/app/src/main/java/com/js/sample/gen
 *.iml
