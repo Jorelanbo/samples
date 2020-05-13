@@ -1,5 +1,6 @@
 package com.js.sample.commonviewpager;
 
+import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,10 +11,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.js.sample.R;
+import com.js.sample.commonviewpager.adapter.CommonViewPagerAdapter;
 import com.js.sample.commonviewpager.entity.DataEntry;
 import com.js.sample.commonviewpager.holder.ViewPagerHolder;
 import com.js.sample.commonviewpager.holder.ViewPagerHolderCreator;
 import com.js.sample.commonviewpager.view.CommonViewPager;
+import com.js.sample.utils.Util;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +27,12 @@ import java.util.List;
 public class CommonViewPagerActivity extends AppCompatActivity {
 
     private CommonViewPager mCommonViewPager;
+    private Context mContext;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mContext = this;
         setContentView(R.layout.activity_common_view_pager);
         initView();
     }
@@ -41,6 +46,13 @@ public class CommonViewPagerActivity extends AppCompatActivity {
                 return new ViewImageHolder();
             }
         });
+        mCommonViewPager.setPageClickListener(new CommonViewPagerAdapter.PageClickListener() {
+            @Override
+            public void onPageClick(View view, int position) {
+                Util.showToast((Activity) mContext, "点击了" + (position + 1) + "号");
+            }
+        });
+        mCommonViewPager.start();
     }
 
     private List<DataEntry> mockData() {

@@ -17,6 +17,7 @@ import java.util.List;
 public class CommonViewPagerAdapter<T> extends PagerAdapter {
     private List<T> mDatas;
     private ViewPagerHolderCreator mCreator; // ViewHolder生成器
+    private PageClickListener mPageClickListener;
 
     public CommonViewPagerAdapter(List<T> datas, ViewPagerHolderCreator creator) {
         mDatas = datas;
@@ -69,6 +70,25 @@ public class CommonViewPagerAdapter<T> extends PagerAdapter {
             // 数据绑定
             holder.onBind(container.getContext(), position, mDatas.get(position));
         }
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (mPageClickListener != null) {
+                    mPageClickListener.onPageClick(v, position);
+                }
+            }
+        });
         return view;
+    }
+
+    public void setPageClickListener(PageClickListener pageClickListener) {
+        mPageClickListener = pageClickListener;
+    }
+
+    /**
+     * page 点击回调
+     */
+    public interface PageClickListener{
+        void onPageClick(View view, int position);
     }
 }

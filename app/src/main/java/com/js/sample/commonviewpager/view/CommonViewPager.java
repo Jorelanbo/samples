@@ -1,11 +1,15 @@
 package com.js.sample.commonviewpager.view;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Build;
+import android.os.Handler;
 import android.support.annotation.RequiresApi;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.RelativeLayout;
 
@@ -117,5 +121,87 @@ public class CommonViewPager<T> extends RelativeLayout {
 
     public ViewPager getViewPager() {
         return mViewPager;
+    }
+
+    /**
+     * 自动轮播功能部分
+     */
+    public void start() {
+        // 如果Adapter为null, 说明还没有设置数据，这个时候不应该轮播Banner
+        if(mAdapter== null){
+            return;
+        }
+        pause();
+        mIsAutoPlay = true;
+        mHandler.postDelayed(mLoopRunnable,mDelayedTime);
+    }
+
+    /**
+     * 停止轮播
+     */
+    public void pause(){
+        mIsAutoPlay = false;
+        mHandler.removeCallbacks(mLoopRunnable);
+    }
+
+    private Handler mHandler = new Handler();
+    private int mDelayedTime = 3000;// Banner 切换时间间隔
+    private int mCurrentItem = 0;//当前位置
+    private boolean mIsAutoPlay = true;// 是否自动播放
+    private final Runnable mLoopRunnable = new Runnable() {
+        @Override
+        public void run() {
+            if(mIsAutoPlay){
+                mCurrentItem = mViewPager.getCurrentItem();
+                mCurrentItem++;
+                if(mCurrentItem == mAdapter.getCount()){
+                    mCurrentItem = 0;
+                    mViewPager.setCurrentItem(mCurrentItem,false);
+                    mHandler.postDelayed(this,mDelayedTime);
+                }else{
+                    mViewPager.setCurrentItem(mCurrentItem);
+                    mHandler.postDelayed(this,mDelayedTime);
+                }
+            }else{
+                mHandler.postDelayed(this,mDelayedTime);
+            }
+        }
+    };
+
+    @Override
+    public boolean dispatchTouchEvent(MotionEvent ev) {
+        switch (ev.getAction()){
+            // 按住Banner的时候，停止自动轮播
+            case MotionEvent.ACTION_MOVE:
+            case MotionEvent.ACTION_CANCEL:
+            case MotionEvent.ACTION_OUTSIDE:
+            case MotionEvent.ACTION_DOWN:
+                int paddingLeft = mViewPager.getLeft();
+                float touchX = ev.getRawX();
+                // 去除两边的区域
+                if(touchX >= paddingLeft && touchX < getScreenWidth(getContext()) - paddingLeft){
+                    pause();
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                start();
+                break;
+        }
+        return super.dispatchTouchEvent(ev);
+    }
+
+    public static int getScreenWidth(Context context){
+        Resources resources = context.getResources();
+        DisplayMetrics dm = resources.getDisplayMetrics();
+        int width = dm.widthPixels;
+        return width;
+    }
+
+    /**
+     * 设置page点击事件
+     * @param pageClickListener
+     */
+    public void setPageClickListener(CommonViewPagerAdapter.PageClickListener pageClickListener) {
+        mAdapter.setPageClickListener(pageClickListener);
     }
 }
