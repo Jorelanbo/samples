@@ -9,6 +9,7 @@ import android.view.View;
 import com.js.sample.R;
 import com.js.sample.activity.materialDesign.MaterialDesignActivity;
 import com.js.sample.activity.recyclerView.UseRecyclerViewProblemsActivity;
+import com.js.sample.commonviewpager.CommonViewPagerActivity;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -199,13 +200,30 @@ public class GuideActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /**
+     * Recyclerview的几个用法
+     * @param view view
+     */
     public void clickRecyclerViewProblem(View view) {
         Intent intent = new Intent(this, UseRecyclerViewProblemsActivity.class);
         startActivity(intent);
     }
 
+    /**
+     * 带有权限控制的加载页面
+     * @param view view
+     */
     public void clickPermissionSplashActivity(View view) {
         Intent intent = new Intent(this, PermissionSplashActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 使用自定义的CommonViewPager
+     * @param view view
+     */
+    public void clickCommonViewPagerActivity(View view) {
+        Intent intent = new Intent(this, CommonViewPagerActivity.class);
         startActivity(intent);
     }
 }

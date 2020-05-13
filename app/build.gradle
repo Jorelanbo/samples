@@ -69,4 +69,5 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
     implementation project(path: ':ktwlib')
     implementation 'com.android.support:palette-v7:28.0.0'
+    implementation 'com.github.pinguo-zhouwei:CircleIndicatorView:v1.0.0'
 }
