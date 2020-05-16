@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center">
 
     <Button
         android:id="@+id/btn_go_intent_service_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="跳转IntentServiceActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
         android:onClick="goIntentServiceActivity"/>
 
     <Button
@@ -24,12 +21,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="跳转NormalServiceActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_go_intent_service_activity"
-        app:layout_constraintVertical_bias="0.137"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/btn_go_intent_service_activity"
         android:onClick="goNormalServiceActivity"/>
 
     <Button
@@ -37,11 +31,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="跳转BindingServiceActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_go_normal_service_activity"
-        app:layout_constraintVertical_bias="0.168"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/btn_go_normal_service_activity"
         android:onClick="goBindingServiceActivity"/>
-</android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_go_front_ground_service_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转前台service"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:layout_below="@+id/btn_go_binding_service_activity"
+        android:onClick="goFrontServiceServiceActivity"/>
+</RelativeLayout>

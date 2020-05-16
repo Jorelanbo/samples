@@ -7,9 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.js.sample.R;
-import com.js.sample.activity.materialDesign.MaterialDesignActivity;
-import com.js.sample.activity.recyclerView.UseRecyclerViewProblemsActivity;
+import com.js.sample.bottomMenu.activity.BottomMenuActivity;
+import com.js.sample.dragableRecyclerview.activity.DraggableRecyclerviewActivity;
+import com.js.sample.greendaodemo.activity.GreenDaoActivity;
+import com.js.sample.materialDesign.activity.MaterialDesignActivity;
+import com.js.sample.popDropdown.PopDropdownActivity;
+import com.js.sample.recyclerView.activity.UseRecyclerViewProblemsActivity;
+import com.js.sample.servicetest.activity.ServiceTestActivity;
 import com.js.sample.commonviewpager.CommonViewPagerActivity;
+import com.js.sample.singleClick.activity.SingleClickTestActivity;
+import com.js.sample.splash.activity.SplashActivity;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -224,6 +231,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickCommonViewPagerActivity(View view) {
         Intent intent = new Intent(this, CommonViewPagerActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 查看设备的多有存储路径
+     * @param view view
+     */
+    public void clickCheckStoragePathActivity(View view) {
+        Intent intent = new Intent(this, CheckStoragePathActivity.class);
         startActivity(intent);
     }
 }
