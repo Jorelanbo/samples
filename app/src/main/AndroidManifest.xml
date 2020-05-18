@@ -193,6 +193,9 @@
             android:parentActivityName=".activity.GuideActivity" />
         <activity android:name=".activity.CheckStoragePathActivity"
             android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".notifycation.NotificationTestActivity"
+            android:label="通知使用"
+            android:parentActivityName=".activity.GuideActivity"/>
 
         <service
             android:name="com.baidu.location.f"

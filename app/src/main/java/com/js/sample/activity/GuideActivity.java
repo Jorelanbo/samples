@@ -11,6 +11,7 @@ import com.js.sample.bottomMenu.activity.BottomMenuActivity;
 import com.js.sample.dragableRecyclerview.activity.DraggableRecyclerviewActivity;
 import com.js.sample.greendaodemo.activity.GreenDaoActivity;
 import com.js.sample.materialDesign.activity.MaterialDesignActivity;
+import com.js.sample.notifycation.NotificationTestActivity;
 import com.js.sample.popDropdown.PopDropdownActivity;
 import com.js.sample.recyclerView.activity.UseRecyclerViewProblemsActivity;
 import com.js.sample.servicetest.activity.ServiceTestActivity;
@@ -240,6 +241,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickCheckStoragePathActivity(View view) {
         Intent intent = new Intent(this, CheckStoragePathActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转通知测试使用页面
+     * @param view view
+     */
+    public void clickNotificationTestActivity(View view) {
+        Intent intent = new Intent(this, NotificationTestActivity.class);
         startActivity(intent);
     }
 }
