@@ -40,6 +40,7 @@ public class NotificationTestActivity extends AppCompatActivity implements View.
     private NotificationManager mNotificationManager;
     private NotificationCompat.Builder interactionBuilder;
     private RemoteViews mRemoteViews;
+    private ButtonBroadcastReceiver bReceiver;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -200,10 +201,16 @@ public class NotificationTestActivity extends AppCompatActivity implements View.
 
     //初始化广播接收器
     public void initBttonReceiver() {
-        ButtonBroadcastReceiver bReceiver=new ButtonBroadcastReceiver();
+        bReceiver = new ButtonBroadcastReceiver();
         IntentFilter intentFilter=new IntentFilter();
         intentFilter.addAction(ACTION_BUTTON);
         registerReceiver(bReceiver,intentFilter);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(bReceiver);
     }
 
     private int i=0;
