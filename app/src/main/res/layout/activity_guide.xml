@@ -183,6 +183,13 @@
             android:text="通知的使用"
             android:onClick="clickNotificationTestActivity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="自定义控件"
+            android:onClick="clickSelfMadeViewsActivity"/>
+
     </LinearLayout>
 
 </ScrollView>

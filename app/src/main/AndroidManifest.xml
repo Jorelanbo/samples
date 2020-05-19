@@ -196,6 +196,12 @@
         <activity android:name=".notifycation.NotificationTestActivity"
             android:label="通知使用"
             android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".selfmadeViews.activity.SelfMadeViewsActivity"
+            android:label="自定义控件"
+            android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".selfmadeViews.activity.SelfDrawingViewsActivity"
+            android:label="自绘控件"
+            android:parentActivityName=".selfmadeViews.activity.SelfMadeViewsActivity"/>
 
         <service
             android:name="com.baidu.location.f"

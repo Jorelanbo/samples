@@ -14,6 +14,7 @@ import com.js.sample.materialDesign.activity.MaterialDesignActivity;
 import com.js.sample.notifycation.NotificationTestActivity;
 import com.js.sample.popDropdown.PopDropdownActivity;
 import com.js.sample.recyclerView.activity.UseRecyclerViewProblemsActivity;
+import com.js.sample.selfmadeViews.activity.SelfMadeViewsActivity;
 import com.js.sample.servicetest.activity.ServiceTestActivity;
 import com.js.sample.commonviewpager.CommonViewPagerActivity;
 import com.js.sample.singleClick.activity.SingleClickTestActivity;
@@ -250,6 +251,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickNotificationTestActivity(View view) {
         Intent intent = new Intent(this, NotificationTestActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转自定义控件使用页面
+     * @param view view
+     */
+    public void clickSelfMadeViewsActivity(View view) {
+        Intent intent = new Intent(this, SelfMadeViewsActivity.class);
         startActivity(intent);
     }
 }
