@@ -81,6 +81,7 @@ public class NotificationTestActivity extends AppCompatActivity implements View.
     @TargetApi(Build.VERSION_CODES.O)
     private void createNotificationChannel(String channelId, String channelName, int importance) {
         NotificationChannel channel = new NotificationChannel(channelId, channelName, importance);
+        channel.setShowBadge(true); // 设置显示应用图标的角标
         mNotificationManager.createNotificationChannel(channel);
     }
 
@@ -134,6 +135,7 @@ public class NotificationTestActivity extends AppCompatActivity implements View.
                 .setSmallIcon(R.mipmap.better)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.better))
                 .setAutoCancel(true)
+                .setNumber(5) // 设置角标数字
                 .setContentIntent(pendingIntent) // 点击进入的页面
                 .build();
         mNotificationManager.notify(1, notification);
@@ -151,6 +153,7 @@ public class NotificationTestActivity extends AppCompatActivity implements View.
                 .setSmallIcon(R.mipmap.better)
                 .setLargeIcon(BitmapFactory.decodeResource(getResources(), R.mipmap.better))
                 .setAutoCancel(true)
+                .setNumber(3) // 设置角标数字
                 .build();
         mNotificationManager.notify(2, notification);
     }
