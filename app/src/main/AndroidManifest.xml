@@ -202,6 +202,12 @@
         <activity android:name=".selfmadeViews.activity.SelfDrawingViewsActivity"
             android:label="自绘控件"
             android:parentActivityName=".selfmadeViews.activity.SelfMadeViewsActivity"/>
+        <activity android:name=".selfmadeViews.activity.CombinationViewActivity"
+            android:label="组合控件"
+            android:parentActivityName=".selfmadeViews.activity.SelfMadeViewsActivity"/>
+        <activity android:name=".selfmadeViews.activity.InheritedViewActivity"
+            android:label="继承控件"
+            android:parentActivityName=".selfmadeViews.activity.SelfMadeViewsActivity"/>
 
         <service
             android:name="com.baidu.location.f"

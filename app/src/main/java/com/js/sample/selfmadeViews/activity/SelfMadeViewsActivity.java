@@ -27,4 +27,22 @@ public class SelfMadeViewsActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SelfDrawingViewsActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 进入组合控件演示页面
+     * @param view view
+     */
+    public void clickCombineViewsActivity(View view) {
+        Intent intent = new Intent(this, CombinationViewActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 进入继承控件演示页面
+     * @param view view
+     */
+    public void clickInheritedViewsActivity(View view) {
+        Intent intent = new Intent(this, InheritedViewActivity.class);
+        startActivity(intent);
+    }
 }

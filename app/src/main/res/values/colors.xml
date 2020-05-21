@@ -13,4 +13,6 @@
     <color name="transparent">#00ffffff</color>
     <color name="black">#000000</color>
     <color name="ic_launcher_background_color">#6560A5</color>
+    <color name="button_color">#1565c0</color>
+    <color name="button_pressed_color">#0d47a1</color>
 </resources>

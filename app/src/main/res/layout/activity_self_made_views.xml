@@ -16,4 +16,18 @@
         android:text="自绘控件演示"
         android:onClick="clickSelfDrawingViewsActivity"/>
 
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="组合控件演示"
+        android:onClick="clickCombineViewsActivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="继承控件演示"
+        android:onClick="clickInheritedViewsActivity"/>
+
 </LinearLayout>
