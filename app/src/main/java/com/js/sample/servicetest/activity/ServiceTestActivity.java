@@ -2,15 +2,11 @@ package com.js.sample.servicetest.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import com.js.sample.R;
-import com.js.sample.servicetest.activity.BindingServiceActivity;
-import com.js.sample.servicetest.activity.FrontGroundServiceActivity;
-import com.js.sample.servicetest.activity.IntentServiceActivity;
-import com.js.sample.servicetest.activity.NormalServiceActivity;
 
 
 // Created by JS on 2019/11/1.

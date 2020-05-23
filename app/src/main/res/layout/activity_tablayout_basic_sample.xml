@@ -12,7 +12,7 @@
         android:layout_margin="10dp"
         android:text="TabLayout.MODE_SCROLLABLE:" />
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutOne"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -23,7 +23,7 @@
         android:layout_margin="10dp"
         android:text="TabLayout.MODE_SCROLLABLE:" />
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutTwo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -34,7 +34,7 @@
         android:layout_margin="10dp"
         android:text="Tab为图片" />
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutThree"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
@@ -45,7 +45,7 @@
         android:layout_margin="10dp"
         android:text="Tab为自定义布局" />
 
-    <android.support.design.widget.TabLayout
+    <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayoutFour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />

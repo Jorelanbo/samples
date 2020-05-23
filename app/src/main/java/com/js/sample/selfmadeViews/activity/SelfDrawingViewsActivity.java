@@ -3,8 +3,8 @@ package com.js.sample.selfmadeViews.activity;
 // Created by JS on 2020/5/19.
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.js.sample.R;
 

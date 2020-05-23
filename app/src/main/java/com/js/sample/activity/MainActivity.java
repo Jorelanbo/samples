@@ -11,10 +11,9 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
 import android.os.SystemClock;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -32,7 +31,6 @@ import okhttp3.OkHttpClient;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    public static final int TAG1 = 1;
     private static final String TAG = "MainActivity";
     private static final int SUCCESS_DOWNLOAD = 1;
     private static final int SUCCESS_LOAD = 2;
@@ -40,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ImageView iv;
     private ImageView iv2;
     private File file;
-    private Button bt2;
 
     @SuppressLint("HandlerLeak")
     @Override

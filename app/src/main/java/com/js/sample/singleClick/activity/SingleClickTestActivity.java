@@ -1,8 +1,8 @@
 package com.js.sample.singleClick.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 
 import com.js.sample.singleClick.listener.CustomOnClickListener;

@@ -3,8 +3,8 @@ package com.js.sample.activity;
 // Created by JS on 2019/12/31.
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.js.sample.R;
 

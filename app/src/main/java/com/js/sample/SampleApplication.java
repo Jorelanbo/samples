@@ -3,6 +3,8 @@ package com.js.sample;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
+import androidx.multidex.MultiDex;
+
 import com.js.sample.gen.DaoMaster;
 import com.js.sample.gen.DaoSession;
 
@@ -26,6 +28,7 @@ public class SampleApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        MultiDex.install(this);
         initGreenDao();
     }
 
