@@ -9,6 +9,7 @@ import android.view.View;
 import com.js.sample.R;
 import com.js.sample.bottomMenu.activity.BottomMenuActivity;
 import com.js.sample.dragableRecyclerview.activity.DraggableRecyclerviewActivity;
+import com.js.sample.eventBusDemo.EventBusTestActivity;
 import com.js.sample.greendaodemo.activity.GreenDaoActivity;
 import com.js.sample.materialDesign.activity.MaterialDesignActivity;
 import com.js.sample.notifycation.NotificationTestActivity;
@@ -260,6 +261,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickSelfMadeViewsActivity(View view) {
         Intent intent = new Intent(this, SelfMadeViewsActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转EventBus使用页面
+     * @param view view
+     */
+    public void clickEventBusTestDemo(View view) {
+        Intent intent = new Intent(this, EventBusTestActivity.class);
         startActivity(intent);
     }
 }

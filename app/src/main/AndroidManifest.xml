@@ -208,6 +208,9 @@
         <activity android:name=".selfmadeViews.activity.InheritedViewActivity"
             android:label="继承控件"
             android:parentActivityName=".selfmadeViews.activity.SelfMadeViewsActivity"/>
+        <activity android:name=".eventBusDemo.EventBusTestActivity"
+            android:label="EventBus的使用"
+            android:parentActivityName=".activity.GuideActivity"/>
 
         <service
             android:name="com.baidu.location.f"

@@ -190,6 +190,13 @@
             android:text="自定义控件"
             android:onClick="clickSelfMadeViewsActivity"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="EventBus的使用"
+            android:onClick="clickEventBusTestDemo"/>
+
     </LinearLayout>
 
 </ScrollView>
