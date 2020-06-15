@@ -15,11 +15,14 @@ import com.js.sample.materialDesign.activity.MaterialDesignActivity;
 import com.js.sample.notifycation.NotificationTestActivity;
 import com.js.sample.popDropdown.PopDropdownActivity;
 import com.js.sample.recyclerView.activity.UseRecyclerViewProblemsActivity;
+import com.js.sample.retrofit.RetrofitTestActivity;
 import com.js.sample.selfmadeViews.activity.SelfMadeViewsActivity;
 import com.js.sample.servicetest.activity.ServiceTestActivity;
 import com.js.sample.commonviewpager.CommonViewPagerActivity;
 import com.js.sample.singleClick.activity.SingleClickTestActivity;
 import com.js.sample.splash.activity.SplashActivity;
+
+import org.greenrobot.eventbus.EventBus;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -270,6 +273,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickEventBusTestDemo(View view) {
         Intent intent = new Intent(this, EventBusTestActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转到Retrofit使用页面
+     * @param view view
+     */
+    public void clickRetrofitDemo(View view) {
+        Intent intent = new Intent(this, RetrofitTestActivity.class);
         startActivity(intent);
     }
 }

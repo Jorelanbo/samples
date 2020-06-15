@@ -211,6 +211,9 @@
         <activity android:name=".eventBusDemo.EventBusTestActivity"
             android:label="EventBus的使用"
             android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".retrofit.RetrofitTestActivity"
+            android:label="Retrofit的使用"
+            android:parentActivityName=".activity.GuideActivity" />
 
         <service
             android:name="com.baidu.location.f"
