@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.js.sample.R;
 import com.js.sample.bottomMenu.activity.BottomMenuActivity;
+import com.js.sample.downloadFile.DownloadFileActivity;
 import com.js.sample.dragableRecyclerview.activity.DraggableRecyclerviewActivity;
 import com.js.sample.eventBusDemo.EventBusTestActivity;
 import com.js.sample.greendaodemo.activity.GreenDaoActivity;
@@ -290,6 +291,15 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickRxJavaDemo(View view) {
         Intent intent = new Intent(this, RxJavaTestActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * 跳转到文件下载页面
+     * @param view view
+     */
+    public void clickDownloadFileDemo(View view) {
+        Intent intent = new Intent(this, DownloadFileActivity.class);
         startActivity(intent);
     }
 }

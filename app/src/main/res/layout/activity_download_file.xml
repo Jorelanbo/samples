@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_original"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用原始方法下载文件并加载进度条"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:onClick="clickUseOriginalWay"/>
+
+    <Button
+        android:id="@+id/btn_okio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用OKIO框架下载文件并加载进度条"
+        android:layout_marginBottom="16dp"
+        android:onClick="clickUseOKIO"/>
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/light_blue"/>
+
+</LinearLayout>
