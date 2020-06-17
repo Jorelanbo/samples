@@ -204,6 +204,13 @@
             android:text="Retrofit的使用"
             android:onClick="clickRetrofitDemo"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="RxJava的使用"
+            android:onClick="clickRxJavaDemo"/>
+
     </LinearLayout>
 
 </ScrollView>

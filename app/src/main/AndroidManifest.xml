@@ -214,6 +214,9 @@
         <activity android:name=".retrofit.RetrofitTestActivity"
             android:label="Retrofit的使用"
             android:parentActivityName=".activity.GuideActivity" />
+        <activity android:name=".rxjava.RxJavaTestActivity"
+            android:label="RxJava的使用"
+            android:parentActivityName=".activity.GuideActivity"/>
 
         <service
             android:name="com.baidu.location.f"
