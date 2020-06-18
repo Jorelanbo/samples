@@ -132,9 +132,9 @@ public class DownloadFileActivity extends AppCompatActivity {
      * 使用OKIO的方式下载文件
      * @param view view
      */
-    public void clickUseOKIO(View view) {
+    public void clickUseOKGO(View view) {
         String url = "http://59.51.73.25:8080/egov/mobile/HYDZZW-APP.apk";
-        File file = new File(Environment.getExternalStorageDirectory(), "updata1.apk");
+        File file = new File(Environment.getExternalStorageDirectory(), "update");
         String savePath = file.getPath();
         OkGo.get(url)
                 .tag(this)
