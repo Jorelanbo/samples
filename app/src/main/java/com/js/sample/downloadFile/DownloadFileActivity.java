@@ -30,6 +30,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.DecimalFormat;
 
 import okhttp3.Call;
 import okhttp3.Response;
@@ -87,6 +88,13 @@ public class DownloadFileActivity extends AppCompatActivity {
             }}.start();
     }
 
+    /**
+     * 从服务器获取文件
+     * @param path 文件地址
+     * @param pd 进度条
+     * @return 文件
+     * @throws Exception 异常
+     */
     public static File getFileFromServer(String path, ProgressDialog pd) throws Exception{
         //如果相等的话表示当前的sdcard挂载在手机上并且是可用的
         if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){
@@ -148,7 +156,8 @@ public class DownloadFileActivity extends AppCompatActivity {
                     @Override
                     public void downloadProgress(long currentSize, long totalSize, float progress, long networkSpeed) {
                         super.downloadProgress(currentSize, totalSize, progress, networkSpeed);
-                        tvProgress.setText("下载进度：" + progress * 100 + "%");
+                        String progressString = new DecimalFormat("0.0").format(progress * 100);
+                        tvProgress.setText("下载进度：" + progressString + "%");
                     }
 
                     @Override
