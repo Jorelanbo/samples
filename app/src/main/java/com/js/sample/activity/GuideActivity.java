@@ -7,6 +7,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import com.js.sample.R;
+import com.js.sample.arcgis.ArcGisActivity;
+import com.js.sample.arcgis.GraphicsOverlayActivity;
 import com.js.sample.bottomMenu.activity.BottomMenuActivity;
 import com.js.sample.downloadFile.DownloadFileActivity;
 import com.js.sample.dragableRecyclerview.activity.DraggableRecyclerviewActivity;

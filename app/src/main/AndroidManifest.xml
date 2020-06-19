@@ -90,8 +90,10 @@
             android:name=".activity.BaiduLocationActivity"
             android:parentActivityName=".activity.GuideActivity" />
         <activity
-            android:name=".activity.ArcGisActivity"
+            android:name=".arcgis.ArcGisActivity"
             android:parentActivityName=".activity.GuideActivity" />
+        <activity android:name=".arcgis.GraphicsOverlayActivity"
+            android:parentActivityName=".activity.GuideActivity"/>
         <activity
             android:name=".greendaodemo.activity.GreenDaoActivity"
             android:parentActivityName=".activity.GuideActivity" />
