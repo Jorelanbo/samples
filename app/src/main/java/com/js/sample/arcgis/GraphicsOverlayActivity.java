@@ -189,10 +189,12 @@ public class GraphicsOverlayActivity extends AppCompatActivity {
                 Polygon polygon = new Polygon(mPointCollection);
 
                 if (mPointCollection.size() == 1) {
-                    SimpleMarkerSymbol simpleMarkerSymbol = new SimpleMarkerSymbol(SimpleMarkerSymbol.Style.CIRCLE, Color.RED, 10);
-                    Graphic pointGraphic = new Graphic(point, simpleMarkerSymbol);
-                    mGraphicsOverlay.getGraphics().add(pointGraphic);
+
                 }
+
+                SimpleMarkerSymbol simpleMarkerSymbol = new SimpleMarkerSymbol(SimpleMarkerSymbol.Style.CIRCLE, Color.RED, 10);
+                Graphic pointGraphic = new Graphic(point, simpleMarkerSymbol);
+                mGraphicsOverlay.getGraphics().add(pointGraphic);
 
                 SimpleLineSymbol lineSymbol = new SimpleLineSymbol(SimpleLineSymbol.Style.SOLID, Color.GREEN, 3.0f);
                 SimpleFillSymbol simpleFillSymbol = new SimpleFillSymbol(SimpleFillSymbol.Style.SOLID, Color.parseColor("#33e97676"), lineSymbol);

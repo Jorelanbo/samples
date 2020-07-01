@@ -118,7 +118,7 @@ public class GuideActivity extends AppCompatActivity {
      * @param view view
      */
     public void clickArcGISActivity(View view) {
-        Intent intent = new Intent(this, ArcGisActivity.class);
+        Intent intent = new Intent(this, GraphicsOverlayActivity.class);
         startActivity(intent);
     }
 
