@@ -46,3 +46,11 @@ PermissionSplashActivity: A SplashActivity with permission control
 EventBusTestActivity: Use eventbus lib
 
 RetrofitTestActivity: retrofit框架的使用
+
+RxJavaTestActivity: RxJava的使用
+
+DownloadFileActivity: 两种方法下载文件
+
+TakePhotoActivity: 拍照测试
+
+TestFishActivity: 小鱼控件
