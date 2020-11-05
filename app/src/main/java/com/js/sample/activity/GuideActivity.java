@@ -2,14 +2,15 @@ package com.js.sample.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.js.sample.R;
-import com.js.sample.arcgis.ArcGisActivity;
 import com.js.sample.arcgis.GraphicsOverlayActivity;
 import com.js.sample.bottomMenu.activity.BottomMenuActivity;
+import com.js.sample.commonviewpager.CommonViewPagerActivity;
 import com.js.sample.downloadFile.DownloadFileActivity;
 import com.js.sample.dragableRecyclerview.activity.DraggableRecyclerviewActivity;
 import com.js.sample.eventBusDemo.EventBusTestActivity;
@@ -22,9 +23,10 @@ import com.js.sample.retrofit.RetrofitTestActivity;
 import com.js.sample.rxjava.RxJavaTestActivity;
 import com.js.sample.selfmadeViews.activity.SelfMadeViewsActivity;
 import com.js.sample.servicetest.activity.ServiceTestActivity;
-import com.js.sample.commonviewpager.CommonViewPagerActivity;
 import com.js.sample.singleClick.activity.SingleClickTestActivity;
 import com.js.sample.splash.activity.SplashActivity;
+import com.js.sample.takePhoto.TakePhotoActivity;
+import com.js.sample.views.fish.activity.TestFishActivity;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -303,5 +305,21 @@ public class GuideActivity extends AppCompatActivity {
     public void clickDownloadFileDemo(View view) {
         Intent intent = new Intent(this, DownloadFileActivity.class);
         startActivity(intent);
+    }
+
+    /**
+     * 跳转到拍照页面
+     * @param view
+     */
+    public void clickTakePhotoDemo(View view) {
+        startActivity(new Intent(this, TakePhotoActivity.class));
+    }
+
+    /**
+     * 跳转自定义小鱼页面
+     * @param view
+     */
+    public void clickFishView(View view) {
+        startActivity(new Intent(this, TestFishActivity.class));
     }
 }

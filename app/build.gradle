@@ -21,7 +21,15 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean","LOG_DEBUG","false"
+        }
+
+        debug{
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "boolean","LOG_DEBUG","true"
+
         }
     }
 
@@ -85,5 +93,7 @@ dependencies {
 
     implementation 'com.lzy.net:okgo:2.1.4'
 
+    /*GLide*/
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
 
 }

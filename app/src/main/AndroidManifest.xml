@@ -223,6 +223,12 @@
         <activity android:name=".downloadFile.DownloadFileActivity"
             android:label="下载文件的几种方式"
             android:parentActivityName=".activity.GuideActivity" />
+        <activity android:name=".takePhoto.TakePhotoActivity"
+            android:label="拍照"
+            android:parentActivityName=".activity.GuideActivity" />
+        <activity android:name=".views.fish.activity.TestFishActivity"
+            android:label="小鱼"
+            android:parentActivityName=".activity.GuideActivity"/>
 
         <service
             android:name="com.baidu.location.f"
@@ -231,6 +237,7 @@
         <!--    exported这个属性用于指示该服务是否能够被其他应用程序组件调用或跟它交互。如果设置为true，则能够被调用或交互，否则不能。    -->
         <service
             android:name=".servicetest.service.HelloIntentService"
+            android:label="demo服务"
             android:description="@string/intent_service_description"
             android:exported="false" />
         <service
@@ -244,6 +251,17 @@
         <service android:name=".servicetest.service.FrontGroundService"
             android:description="@string/front_ground_service_description"
             android:exported="false" />
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.js.sample.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
     </application>
 
 </manifest>

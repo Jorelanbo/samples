@@ -283,6 +283,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 dialog.dismiss();
             }
         });
+        dialog.setCanceledOnTouchOutside(false);
         dialog.setView(view);
         dialog.show();
     }

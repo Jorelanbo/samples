@@ -218,6 +218,20 @@
             android:text="下载文件并加载进度条"
             android:onClick="clickDownloadFileDemo"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="拍照"
+            android:onClick="clickTakePhotoDemo"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="自定义小鱼控件"
+            android:onClick="clickFishView"/>
+
     </LinearLayout>
 
 </ScrollView>
