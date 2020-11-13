@@ -18,6 +18,7 @@ import com.js.sample.greendaodemo.activity.GreenDaoActivity;
 import com.js.sample.materialDesign.activity.MaterialDesignActivity;
 import com.js.sample.notifycation.NotificationTestActivity;
 import com.js.sample.popDropdown.PopDropdownActivity;
+import com.js.sample.progressBar.activity.TestProgressBarActivity;
 import com.js.sample.recyclerView.activity.UseRecyclerViewProblemsActivity;
 import com.js.sample.retrofit.RetrofitTestActivity;
 import com.js.sample.rxjava.RxJavaTestActivity;
@@ -321,5 +322,13 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickFishView(View view) {
         startActivity(new Intent(this, TestFishActivity.class));
+    }
+
+    /**
+     * 跳转自定义进度条样式页面
+     * @param view
+     */
+    public void clickTestProgressBar(View view) {
+        startActivity(new Intent(this, TestProgressBarActivity.class));
     }
 }

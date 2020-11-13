@@ -54,3 +54,5 @@ DownloadFileActivity: 两种方法下载文件
 TakePhotoActivity: 拍照测试
 
 TestFishActivity: 小鱼控件
+
+TestProgressBarActivity: 自定义progressbar 样式

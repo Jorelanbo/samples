@@ -229,6 +229,9 @@
         <activity android:name=".views.fish.activity.TestFishActivity"
             android:label="小鱼"
             android:parentActivityName=".activity.GuideActivity"/>
+        <activity android:name=".progressBar.activity.TestProgressBarActivity"
+            android:label="自定义进度条样式"
+            android:parentActivityName=".activity.GuideActivity"/>
 
         <service
             android:name="com.baidu.location.f"

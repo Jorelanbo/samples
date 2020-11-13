@@ -232,6 +232,13 @@
             android:text="自定义小鱼控件"
             android:onClick="clickFishView"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="自定义进度条样式"
+            android:onClick="clickTestProgressBar"/>
+
     </LinearLayout>
 
 </ScrollView>
