@@ -1,19 +1,27 @@
 package com.js.sample.takePhoto;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
 import com.bumptech.glide.Glide;
@@ -27,11 +35,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 
 // Created by JS on 2020/7/1.
 
 public class TakePhotoActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private static final String TAG = "TakePhotoActivity";
 
     private Button btnTakePhoto;
     private ImageView ivImage;
@@ -40,12 +52,31 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
     private Uri imageUri;
     private File gpsPhotoFile;
 
+    //1、首先声明一个数组permissions，将需要的权限都放在里面
+    String[] permissions = new String[]{
+//            Manifest.permission.ACCESS_COARSE_LOCATION,
+//            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.CAMERA,
+//            Manifest.permission.SYSTEM_ALERT_WINDOW, // 显示悬浮窗的权限
+//            Manifest.permission.READ_PHONE_STATE, // 获取手机状态的权限
+//            Manifest.permission.CALL_PHONE // 打电话的权限
+    };
+    //2、创建一个mPermissionList，逐个判断哪些权限未授予，未授予的权限存储到mPerrrmissionList中
+    List<String> mPermissionList = new ArrayList<>();
+
+    private final int mRequestCode = 100;//权限请求码
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_take_photo);
         initView();
         initDir();
+        if (Build.VERSION.SDK_INT >= 23) {
+            initPermission();
+        }
     }
 
     private void initDir() {
@@ -67,6 +98,26 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
         btnTakePhoto = findViewById(R.id.btn_take_photo);
         btnTakePhoto.setOnClickListener(this);
         ivImage = findViewById(R.id.iv_image);
+    }
+
+    //权限判断和申请
+    private void initPermission() {
+        LogUtils.d(TAG, "initPermission");
+        mPermissionList.clear();//清空没有通过的权限
+
+        //逐个判断你要的权限是否已经通过
+        for (int i = 0; i < permissions.length; i++) {
+            if (ContextCompat.checkSelfPermission(this, permissions[i]) != PackageManager.PERMISSION_GRANTED) {
+                mPermissionList.add(permissions[i]);//添加还未授予的权限
+            }
+        }
+
+        LogUtils.d(TAG, "mPermissionList.size()：" + mPermissionList.size());
+
+        //申请权限
+        if (mPermissionList.size() > 0) {//有权限没有通过，需要申请
+            ActivityCompat.requestPermissions(this, permissions, mRequestCode);
+        }
     }
 
     @Override
@@ -169,5 +220,65 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    //请求权限后回调的方法
+    //参数： requestCode  是我们自己定义的权限请求码
+    //参数： permissions  是我们请求的权限名称数组
+    //参数： grantResults 是我们在弹出页面后是否允许权限的标识数组，数组的长度对应的是权限名称数组的长度，数组的数据0表示允许权限，-1表示我们点击了禁止权限
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        boolean hasPermissionDismiss = false;//有权限没有通过
+        if (mRequestCode == requestCode) {
+            for (int i = 0; i < grantResults.length; i++) {
+                if (grantResults[i] == -1) {
+                    hasPermissionDismiss = true;
+                }
+            }
+            //如果有权限没有被允许
+            if (hasPermissionDismiss) {
+                showPermissionDialog();//跳转到系统设置权限页面，或者直接关闭页面，不让他继续访问
+            }
+        }
+
+    }
+
+    /**
+     * 不再提示权限时的展示对话框
+     */
+    AlertDialog mPermissionDialog;
+    String mPackName = "com.js.sample";
+
+    private void showPermissionDialog() {
+        if (mPermissionDialog == null) {
+            mPermissionDialog = new AlertDialog.Builder(this)
+                    .setMessage("已禁用权限，请手动授予，然后重新进入应用")
+                    .setPositiveButton("设置", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            cancelPermissionDialog();
+
+                            Uri packageURI = Uri.parse("package:" + mPackName);
+                            Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS, packageURI);
+                            startActivity(intent);
+                        }
+                    })
+                    .setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            //关闭页面或者做其他操作
+                            cancelPermissionDialog();
+                            finish();
+                        }
+                    })
+                    .create();
+        }
+        mPermissionDialog.show();
+    }
+
+    //关闭对话框
+    private void cancelPermissionDialog() {
+        mPermissionDialog.cancel();
     }
 }
