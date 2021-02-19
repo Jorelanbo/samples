@@ -54,14 +54,14 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
 
     //1、首先声明一个数组permissions，将需要的权限都放在里面
     String[] permissions = new String[]{
-//            Manifest.permission.ACCESS_COARSE_LOCATION,
-//            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_FINE_LOCATION,
             Manifest.permission.READ_EXTERNAL_STORAGE,
             Manifest.permission.WRITE_EXTERNAL_STORAGE,
             Manifest.permission.CAMERA,
 //            Manifest.permission.SYSTEM_ALERT_WINDOW, // 显示悬浮窗的权限
-//            Manifest.permission.READ_PHONE_STATE, // 获取手机状态的权限
-//            Manifest.permission.CALL_PHONE // 打电话的权限
+            Manifest.permission.READ_PHONE_STATE, // 获取手机状态的权限
+            Manifest.permission.CALL_PHONE // 打电话的权限
     };
     //2、创建一个mPermissionList，逐个判断哪些权限未授予，未授予的权限存储到mPerrrmissionList中
     List<String> mPermissionList = new ArrayList<>();
@@ -173,6 +173,7 @@ public class TakePhotoActivity extends AppCompatActivity implements View.OnClick
     private void setImage() {
         try {
             // 将拍摄的照片显示出来
+            if (imageUri == null) return;
             Bitmap bitmap = ImageUtils.getBitmapFromUri(this, imageUri);
             if (bitmap == null) {
                 ToastUtil.showToast(this, "拍摄出错!");
