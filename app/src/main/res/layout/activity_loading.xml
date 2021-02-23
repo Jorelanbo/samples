@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.ktw.ktwlib.widget.CircleLoadingView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        app:start_color="#FFFFFF"
+        app:end_color="#000000"
+        app:stroke_width="30"
+        app:anim_duration="3000"/>
+    
+    <ProgressBar
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:indeterminateDrawable="@drawable/anim_progress"/>
+</LinearLayout>

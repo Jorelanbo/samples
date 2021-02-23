@@ -28,6 +28,7 @@ import com.js.sample.singleClick.activity.SingleClickTestActivity;
 import com.js.sample.splash.activity.SplashActivity;
 import com.js.sample.takePhoto.TakePhotoActivity;
 import com.js.sample.views.fish.activity.TestFishActivity;
+import com.js.sample.views.load.LoadingActivity;
 
 public class GuideActivity extends AppCompatActivity {
 
@@ -330,5 +331,13 @@ public class GuideActivity extends AppCompatActivity {
      */
     public void clickTestProgressBar(View view) {
         startActivity(new Intent(this, TestProgressBarActivity.class));
+    }
+
+    /**
+     * 跳转加载动画展示页面
+     * @param view
+     */
+    public void clickLoadingView(View view) {
+        startActivity(new Intent(this, LoadingActivity.class));
     }
 }

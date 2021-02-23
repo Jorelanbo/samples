@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -45,4 +46,38 @@
         android:progress="80"
         android:progressDrawable="@drawable/layer_list_progress_drawable_4"/>
 
+    <com.ktw.ktwlib.widget.FiveNodesToggleButton
+        android:id="@+id/fiveNodesToggleButton"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:toggle_img_res="@mipmap/icon_more"/>
+
+    <com.ktw.ktwlib.widget.SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        app:img_res="@mipmap/pic_knob"
+        app:line_color="@color/text_color_light_blue_pre"/>
+
+    <TextView
+        android:id="@+id/tv_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textSize="15sp"
+        android:textColor="@color/bottom_radio_button_default"
+        android:textStyle="bold"/>
+
+    <com.ktw.ktwlib.widget.SlideButtonView
+        android:id="@+id/slideView"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"/>
 </LinearLayout>

@@ -239,6 +239,13 @@
             android:text="自定义进度条样式"
             android:onClick="clickTestProgressBar"/>
 
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:text="加载动画"
+            android:onClick="clickLoadingView"/>
+
     </LinearLayout>
 
 </ScrollView>
