@@ -45,4 +45,20 @@ public class SelfMadeViewsActivity extends AppCompatActivity {
         Intent intent = new Intent(this, InheritedViewActivity.class);
         startActivity(intent);
     }
+
+    /**
+     * 进入仿百度下拉动画页面
+     * @param view
+     */
+    public void clickBDRV(View view) {
+        startActivity(new Intent(this, ShowBaiduRefreshListViewActivity.class));
+    }
+
+    /**
+     * 自定义下拉刷新上拉加载更多rv
+     * @param view
+     */
+    public void clickLRV(View view) {
+        startActivity(new Intent(this, EndlessLinearLayoutActivity.class));
+    }
 }

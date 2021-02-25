@@ -6,8 +6,18 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:gravity="center"
     android:orientation="vertical">
+
+    <com.ktw.ktwlib.widget.TestView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/button_color">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@color/text_color_light_blue"/>
+    </com.ktw.ktwlib.widget.TestView>
 
     <Button
         android:layout_width="match_parent"
@@ -29,5 +39,19 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:text="继承控件演示"
         android:onClick="clickInheritedViewsActivity"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="仿百度下拉刷新动画"
+        android:onClick="clickBDRV"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:text="自定义下拉刷新上拉加载更多RV"
+        android:onClick="clickLRV"/>
 
 </LinearLayout>

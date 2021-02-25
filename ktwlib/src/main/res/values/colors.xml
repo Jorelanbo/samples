@@ -23,4 +23,8 @@
     <color name="light_grey3">#cccccc</color>
     <color name="light_grey">#cccccc</color>
     <color name="orange">#ffff00</color>
+
+    <color name="color_hint">#FFB5B5B5</color>
+    <color name="split">#eeeeee</color>
+    <color name="dark">#5e5656</color>
 </resources>

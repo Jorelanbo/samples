@@ -44,4 +44,7 @@
     <string name="checkbox_in_recyclerview_single_check">使用onClickListener代替onCheckedChangeListener的方法，实现列表单选</string>
     <string name="get">获取</string>
     <string name="get_query_data">获取Query Data</string>
+
+    <string name="header_text">The Header</string>
+    <string name="footer_text">The Footer</string>
 </resources>
