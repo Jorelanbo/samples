@@ -40,6 +40,8 @@ public class BaiDuRefreshHeader extends LinearLayout implements IRefreshHeader {
 
     private WeakHandler mHandler = new WeakHandler();
 
+    private boolean isAnimating = false; // 是否正在动画
+
     public BaiDuRefreshHeader(Context context) {
         super(context);
         initView(context);
@@ -88,20 +90,20 @@ public class BaiDuRefreshHeader extends LinearLayout implements IRefreshHeader {
         switch (state) {
             case STATE_NORMAL:
                 LogUtils.d(TAG, "刷新归位");
+                stopAnim();
                 break;
             case STATE_RELEASE_TO_REFRESH:
                 LogUtils.d(TAG, "准备刷新");
-                startAnim();
+                startAnim(0);
                 break;
             case STATE_REFRESHING:
                 LogUtils.d(TAG, "刷新中");
-                startAnim();
+                startAnim(1);
                 break;
             case STATE_DONE:
                 LogUtils.d(TAG, "刷新完成");
                 //设置headerView的padding为隐藏
                 mContainer.setPadding(0, -mMeasuredHeight, 0, 0);
-                startAnim();
                 break;
         }
         mState = state;
@@ -219,8 +221,20 @@ public class BaiDuRefreshHeader extends LinearLayout implements IRefreshHeader {
     /**
      * 开启动画
      */
-    public void startAnim(){
+    public void startAnim(int i){
         LogUtils.d(TAG, "开始动画");
+        if (i == 0) {
+            LogUtils.d(TAG, "刷新前的动画0");
+        }
+        if (i == 1) {
+            LogUtils.d(TAG, "刷新中的动画1");
+        }
+        ivBack1.clearAnimation();
+        ivBack2.clearAnimation();
+        ivSun.clearAnimation();
+        ivWheel1.clearAnimation();
+        ivWheel2.clearAnimation();
+
         ivBack1.startAnimation(backAnimation1);
         ivBack2.startAnimation(backAnimation2);
         ivSun.startAnimation(sunAnimation);

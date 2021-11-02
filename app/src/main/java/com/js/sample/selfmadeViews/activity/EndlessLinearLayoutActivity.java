@@ -139,7 +139,7 @@ public class EndlessLinearLayoutActivity extends AppCompatActivity {
             public void onRefresh() {
 
                 mDataAdapter.clear();
-                mLRecyclerViewAdapter.notifyDataSetChanged();
+//                mLRecyclerViewAdapter.notifyDataSetChanged();
                 mCurrentCounter = 0;
                 requestData();
             }

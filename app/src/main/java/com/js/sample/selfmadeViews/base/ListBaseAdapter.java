@@ -89,6 +89,7 @@ public abstract class ListBaseAdapter<T> extends RecyclerView.Adapter<SuperViewH
 
     public void clear() {
         mDataList.clear();
-        notifyDataSetChanged();
+//        notifyDataSetChanged();
+        notifyItemRangeChanged(1, getItemCount() - 1);
     }
 }
